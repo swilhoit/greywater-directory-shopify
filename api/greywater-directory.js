@@ -85,6 +85,12 @@ function handler(req, res) {
     
     const action = req.query.action || 'list';
     
+    // Auto-detect if request is coming from Shopify (for Liquid format)
+    const isShopifyRequest = req.headers['user-agent']?.includes('Shopify') || 
+                             req.headers['x-shopify-shop-domain'] || 
+                             req.query.format === 'liquid';
+    const format = isShopifyRequest ? 'liquid' : (req.query.format || 'html');
+    
     try {
         const stateData = loadStateData();
         if (!stateData) {
@@ -94,6 +100,15 @@ function handler(req, res) {
         switch (action) {
             case 'list':
                 // Return the main directory page
+                if (format === 'liquid') {
+                    const liquidPath = path.join(__dirname, '../pages/greywater-directory.liquid');
+                    if (fs.existsSync(liquidPath)) {
+                        const liquid = fs.readFileSync(liquidPath, 'utf8');
+                        res.setHeader('Content-Type', 'application/liquid');
+                        return res.send(liquid);
+                    }
+                }
+                // Fallback to HTML
                 const htmlPath = path.join(__dirname, '../pages/greywater-directory.html');
                 if (fs.existsSync(htmlPath)) {
                     const html = fs.readFileSync(htmlPath, 'utf8');
@@ -104,7 +119,16 @@ function handler(req, res) {
                 }
                 
             case 'state-page':
-                // Return the state detail page HTML
+                // Return the state detail page
+                if (format === 'liquid') {
+                    const liquidStatePath = path.join(__dirname, '../pages/state-detail.liquid');
+                    if (fs.existsSync(liquidStatePath)) {
+                        const liquid = fs.readFileSync(liquidStatePath, 'utf8');
+                        res.setHeader('Content-Type', 'application/liquid');
+                        return res.send(liquid);
+                    }
+                }
+                // Fallback to HTML
                 const statePagePath = path.join(__dirname, '../pages/state-detail.html');
                 if (fs.existsSync(statePagePath)) {
                     const html = fs.readFileSync(statePagePath, 'utf8');
