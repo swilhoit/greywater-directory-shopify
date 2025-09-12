@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "name": "greywater-directory-shopify",
+  "builds": [
+    {
+      "src": "api/greywater-directory.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "pages/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "greywater-state-directory.json",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/apps/greywater-directory",
+      "dest": "/api/greywater-directory.js"
+    },
+    {
+      "src": "/greywater-directory",
+      "dest": "/api/greywater-directory.js"
+    },
+    {
+      "src": "/",
+      "dest": "/api/greywater-directory.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
