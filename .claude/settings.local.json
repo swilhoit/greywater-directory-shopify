@@ -18,7 +18,9 @@
       "Bash(gh repo create:*)",
       "Bash(npm install:*)",
       "Bash(vercel:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(brew install:*)",
+      "Bash(shopify:*)"
     ],
     "deny": [],
     "ask": []

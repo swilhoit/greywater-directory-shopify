@@ -1,11 +1,5 @@
 {
   "version": 2,
-  "name": "greywater-directory-shopify",
-  "functions": {
-    "api/greywater-directory.js": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "rewrites": [
     {
       "source": "/apps/greywater-directory",
