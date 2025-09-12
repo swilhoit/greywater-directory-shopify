@@ -244,6 +244,10 @@
             border-bottom: 1px solid #ecf0f1;
         }
 
+        .states-table tbody tr {
+            cursor: pointer;
+        }
+        
         .states-table tr:hover {
             background: #f8f9fa;
         }
@@ -463,12 +467,8 @@
         }
 
         function showStateDetails(stateName) {
-            // For Shopify App Proxy, you might want to redirect to a detail page
-            // or show a modal with more information
-            const state = stateData.find(s => s.state === stateName);
-            if (state) {
-                alert(`${stateName}\n\nStatus: ${state.status}\nAgency: ${state.primaryAgency}\nSummary: ${state.summary.substring(0, 200)}...`);
-            }
+            // Navigate to state detail page
+            window.location.href = `/apps/greywater-directory?action=state-page&state=${encodeURIComponent(stateName)}`;
         }
 
         // Initialize the app

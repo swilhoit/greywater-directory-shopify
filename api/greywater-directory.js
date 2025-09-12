@@ -103,6 +103,17 @@ function handler(req, res) {
                     return res.status(404).json({ error: 'Directory page not found' });
                 }
                 
+            case 'state-page':
+                // Return the state detail page HTML
+                const statePagePath = path.join(__dirname, '../pages/state-detail.html');
+                if (fs.existsSync(statePagePath)) {
+                    const html = fs.readFileSync(statePagePath, 'utf8');
+                    res.setHeader('Content-Type', 'text/html');
+                    return res.send(html);
+                } else {
+                    return res.status(404).json({ error: 'State detail page not found' });
+                }
+                
             case 'data':
                 // Return JSON data for AJAX requests
                 const transformedData = transformStateData(stateData);

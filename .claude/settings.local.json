@@ -20,7 +20,10 @@
       "Bash(vercel:*)",
       "Bash(git push:*)",
       "Bash(brew install:*)",
-      "Bash(shopify:*)"
+      "Bash(shopify:*)",
+      "Bash(cp:*)",
+      "Bash(grep:*)",
+      "Bash(PORT=8081 npm start)"
     ],
     "deny": [],
     "ask": []
