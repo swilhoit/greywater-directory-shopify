@@ -23,11 +23,11 @@ function verifyShopifyProxyRequest(query, secret) {
     
     if (!signature) return false;
     
-    // Sort parameters and create query string (Shopify format)
+    // Sort parameters and create query string (Shopify format - no & separator, no URL encoding)
     const sortedParams = Object.keys(params)
         .sort()
         .map(key => `${key}=${params[key]}`)
-        .join('&');
+        .join('');
     
     console.log('Sorted params for signature:', sortedParams);
     

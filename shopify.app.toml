@@ -1,9 +1,10 @@
-# Learn more about configuring your Shopify app at https://shopify.dev/docs/apps/tools/cli/configuration
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
+client_id = "9ce5394ae224a6645fc5fa6dfc0dadeb"
 name = "Greywater Directory"
-client_id = "e8f6347abf7facf2e1ab850fbc38bf00"
-application_url = "https://greywater-directory-shopify-m0p6e2v2q-swilhoits-projects.vercel.app"
+application_url = "https://greywater-directory-shopify-exfe5id4u-swilhoits-projects.vercel.app"
 embedded = false
+handle = "greywater-directory-1"
 
 [access_scopes]
 # No specific scopes needed for App Proxy functionality
@@ -11,7 +12,7 @@ scopes = ""
 
 [auth]
 redirect_urls = [
-  "https://greywater-directory-shopify-m0p6e2v2q-swilhoits-projects.vercel.app/auth/callback"
+  "https://greywater-directory-shopify-exfe5id4u-swilhoits-projects.vercel.app/auth/callback"
 ]
 
 [webhooks]
@@ -22,10 +23,10 @@ embedded = false
 
 [build]
 automatically_update_urls_on_dev = false
-dev_store_url = "https://your-dev-store.myshopify.com"
+dev_store_url = "waterwisegroup.myshopify.com"
 include_config_on_deploy = true
 
-[[app_proxy]]
-url = "https://greywater-directory-shopify-m0p6e2v2q-swilhoits-projects.vercel.app"
+[app_proxy]
+url = "https://greywater-directory-shopify-exfe5id4u-swilhoits-projects.vercel.app"
 subpath = "greywater-directory"
-prefix = "apps"
+prefix = "tools"
