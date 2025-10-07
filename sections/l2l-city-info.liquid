@@ -1,0 +1,229 @@
+{% comment %}
+  City-specific information section for L2L pages
+  Displays local water district info, permits, rebates, and climate data
+{% endcomment %}
+
+{% liquid
+  # Get only city name and rebate notice metafields
+  assign city_name = page.metafields.l2l_city.city_name
+  assign rebate_notice = page.metafields.l2l_city.rebate_notice
+
+  # Show section if we have city data
+  if city_name == blank
+    assign show_section = false
+  else
+    assign show_section = true
+  endif
+%}
+
+{% if show_section %}
+<style>
+  .l2l-city-info-section {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.background_color }};
+  }
+
+  .l2l-city-info-container {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .l2l-city-info-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .l2l-city-info-header h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: {{ section.settings.heading_color }};
+    margin-bottom: 1rem;
+  }
+
+  .l2l-city-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .l2l-city-info-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s;
+  }
+
+  .l2l-city-info-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .l2l-city-info-card h3 {
+    color: {{ section.settings.card_heading_color }};
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .l2l-city-info-card p {
+    color: {{ section.settings.text_color }};
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  .l2l-city-info-card strong {
+    color: {{ section.settings.label_color }};
+  }
+
+  .l2l-city-highlight {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border: 2px solid #4caf50;
+  }
+
+  .l2l-city-info-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: {{ section.settings.badge_bg }};
+    color: {{ section.settings.badge_color }};
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+
+  .l2l-city-info-link {
+    color: {{ section.settings.link_color }};
+    text-decoration: underline;
+    transition: opacity 0.2s;
+  }
+
+  .l2l-city-info-link:hover {
+    opacity: 0.8;
+  }
+</style>
+
+<div class="l2l-city-info-section">
+  <div class="l2l-city-info-container">
+    {% if section.settings.heading != blank %}
+      <div class="l2l-city-info-header">
+        <h2>{{ section.settings.heading | replace: '[CITY]', city_name }}</h2>
+      </div>
+    {% endif %}
+
+    <div class="l2l-city-info-grid">
+      {% comment %} Rebate Notice Card (if available) {% endcomment %}
+      {% if rebate_notice != blank %}
+        <div class="l2l-city-info-card l2l-city-highlight">
+          <h3>💰 Local Rebates & Incentives</h3>
+          <p>{{ rebate_notice }}</p>
+        </div>
+      {% endif %}
+
+      {% comment %} General Information Card {% endcomment %}
+      <div class="l2l-city-info-card">
+        <h3>📋 Getting Started in {{ city_name }}</h3>
+        <p>Check with your local building department for current permit requirements for laundry-to-landscape greywater systems in {{ city_name }}.</p>
+        <p>Most simple laundry-to-landscape systems are permitted or exempt in many areas, but regulations vary by municipality.</p>
+      </div>
+
+      {% comment %} Benefits Card {% endcomment %}
+      <div class="l2l-city-info-card">
+        <h3>🌱 Why Choose L2L in {{ city_name }}</h3>
+        <p>Greywater systems provide consistent irrigation for your {{ city_name }} landscape while reducing water bills and environmental impact.</p>
+        <p>Most L2L systems pay for themselves within 1-2 years through water savings alone.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "L2L City Information",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "L2L Greywater in [CITY]",
+      "info": "Use [CITY] to insert city name dynamically"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f8f9fa"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "card_heading_color",
+      "label": "Card Heading Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "badge_bg",
+      "label": "Badge Background",
+      "default": "#4caf50"
+    },
+    {
+      "type": "color",
+      "id": "badge_color",
+      "label": "Badge Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link Color",
+      "default": "#2196f3"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "L2L City Information"
+    }
+  ]
+}
+{% endschema %}

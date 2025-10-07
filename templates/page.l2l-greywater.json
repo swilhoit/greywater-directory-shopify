@@ -1,0 +1,85 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero": {
+      "type": "hero-l2l",
+      "settings": {
+        "heading": "Laundry to Landscape Greywater Systems",
+        "text": "Save water, save money, and help your garden thrive with a simple greywater recycling system",
+        "button_label": "Get Started",
+        "button_link": "#installation",
+        "image_position": "right"
+      }
+    },
+    "statistics": {
+      "type": "l2l-statistics",
+      "settings": {
+        "heading": "The Impact You Can Make",
+        "columns": "4"
+      },
+      "blocks": {
+        "stat_1": {
+          "type": "statistic",
+          "settings": {
+            "icon": "💧",
+            "number": "10000",
+            "suffix": "+",
+            "label": "Gallons Saved Yearly",
+            "description": "Per household with L2L system"
+          }
+        },
+        "stat_2": {
+          "type": "statistic",
+          "settings": {
+            "icon": "💰",
+            "number": "300",
+            "suffix": "$",
+            "label": "Annual Savings",
+            "description": "Average reduction in water bills"
+          }
+        },
+        "stat_3": {
+          "type": "statistic",
+          "settings": {
+            "icon": "🌱",
+            "number": "40",
+            "suffix": "%",
+            "label": "Less Outdoor Water Use",
+            "description": "Reduction in irrigation needs"
+          }
+        },
+        "stat_4": {
+          "type": "statistic",
+          "settings": {
+            "icon": "⏱️",
+            "number": "2",
+            "suffix": "days",
+            "label": "Installation Time",
+            "description": "DIY weekend project"
+          }
+        }
+      },
+      "block_order": ["stat_1", "stat_2", "stat_3", "stat_4"]
+    },
+    "city_info_section": {
+      "type": "l2l-city-info",
+      "settings": {
+        "heading": "L2L Greywater in [CITY]",
+        "background_color": "#f8f9fa"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero",
+    "statistics",
+    "city_info_section"
+  ]
+}

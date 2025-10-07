@@ -1,0 +1,438 @@
+{
+  "sections": {
+    "image_banner_laundry": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Transform Your Laundry Water into a Beautiful Landscape",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Discover how to reuse greywater from your washing machine to irrigate your garden sustainably",
+            "text_style": "subtitle"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Get Started",
+            "button_link_1": "#getting-started",
+            "button_style_secondary_1": false,
+            "button_label_2": "Learn More",
+            "button_link_2": "#learn-more",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "image": "shopify://shop_images/LAUNDRY_2_LANDSCAPE_3_-_extendo.png",
+        "image_overlay_opacity": 30,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_overlap": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Simple, Affordable, and Eco-Friendly",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Laundry-to-landscape greywater systems are the easiest and most cost-effective way to reuse household water. No permits required in most areas, and you can install it yourself in a weekend.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": false,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_1": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "How It Works",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A laundry-to-landscape system diverts water from your washing machine directly to your landscape. The system uses your washer's internal pump to distribute water through 1-inch tubing to multiple mulch basins around trees, bushes, or other plantings.</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "View Installation Guide",
+            "button_link": "/pages/installation-guide",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "image": "shopify://shop_images/diversionSystemLandscape-transparent.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "apps": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "multicolumn_benefits": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ww-white-logo.png",
+            "title": "Save Water & Money",
+            "text": "<p>Reduce your water bill by reusing up to 40 gallons per load for irrigation</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_2": {
+          "type": "column",
+          "settings": {
+            "title": "No Permits Required",
+            "text": "<p>In most areas, laundry-to-landscape systems don't require permits when installed correctly</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3": {
+          "type": "column",
+          "settings": {
+            "title": "Easy DIY Installation",
+            "text": "<p>Install yourself in a weekend with basic plumbing skills and tools</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["column_1", "column_2", "column_3"],
+      "settings": {
+        "title": "Benefits of Laundry-to-Landscape",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collage_system": {
+      "type": "collage",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LAUNDRY_2_LANDSCAPE_3_-_extendo.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/filtering.png"
+          }
+        },
+        "product": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "second_image": false
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "product"],
+      "settings": {
+        "heading": "System Components",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_steps": {
+      "type": "multicolumn",
+      "blocks": {
+        "step_1": {
+          "type": "column",
+          "settings": {
+            "title": "Step 1: Plan Your System",
+            "text": "<p>Determine outlet locations and calculate tubing lengths needed</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "step_2": {
+          "type": "column",
+          "settings": {
+            "title": "Step 2: Install Diverter Valve",
+            "text": "<p>Connect a 3-way valve to your washer drain to switch between landscape and sewer</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "step_3": {
+          "type": "column",
+          "settings": {
+            "title": "Step 3: Run Distribution Lines",
+            "text": "<p>Install 1-inch tubing from the washer to mulch basins in your yard</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "step_4": {
+          "type": "column",
+          "settings": {
+            "title": "Step 4: Create Mulch Basins",
+            "text": "<p>Dig shallow basins around plants and fill with wood chip mulch</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["step_1", "step_2", "step_3", "step_4"],
+      "settings": {
+        "title": "Installation Steps",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "secondary",
+        "button_label": "Download Full Guide",
+        "button_link": "/pages/installation-guide",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_details": {
+      "type": "multirow",
+      "blocks": {
+        "row_1": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/diversionSystemLandscape-transparent.png",
+            "caption": "Diverter System",
+            "heading": "3-Way Diverter Valve",
+            "text": "<p>The heart of your system - allows you to send water to the landscape or sewer with a simple turn of the handle. Install it at an accessible location near your washing machine.</p>",
+            "button_label": "Shop Valves",
+            "button_link": "/collections/valves"
+          }
+        },
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/filtering.png",
+            "caption": "Distribution",
+            "heading": "Auto Vent & Flow Splitter",
+            "text": "<p>Prevents siphoning and distributes water evenly to multiple zones in your landscape. Essential for proper system function and protecting your washing machine.</p>",
+            "button_label": "Learn More",
+            "button_link": "/pages/components"
+          }
+        }
+      },
+      "block_order": ["row_1", "row_2"],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "scheme-1",
+        "row_color_scheme": "scheme-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_maintenance": {
+      "type": "multicolumn",
+      "blocks": {
+        "tip_1": {
+          "type": "column",
+          "settings": {
+            "title": "Use Plant-Friendly Detergent",
+            "text": "<p>Switch to detergents without sodium, boron, or chlorine bleach</p>",
+            "link_label": "Recommended Products",
+            "link": "/pages/safe-detergents"
+          }
+        },
+        "tip_2": {
+          "type": "column",
+          "settings": {
+            "title": "Maintain Mulch Basins",
+            "text": "<p>Add fresh mulch annually and keep basins clear of debris</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "tip_3": {
+          "type": "column",
+          "settings": {
+            "title": "Monitor Plant Health",
+            "text": "<p>Watch for signs of overwatering and adjust distribution as needed</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["tip_1", "tip_2", "tip_3"],
+      "settings": {
+        "title": "Maintenance Tips",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "contact_form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Need Help Planning Your System?",
+        "heading_size": "h2",
+        "color_scheme": "scheme-2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is laundry-to-landscape legal in my area?",
+            "icon": "check_mark",
+            "row_content": "<p>Most states allow laundry-to-landscape systems without permits when following guidelines. Check our state directory for specific regulations in your area.</p>",
+            "page": ""
+          }
+        },
+        "faq_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What plants work best with greywater?",
+            "icon": "leaf",
+            "row_content": "<p>Fruit trees, ornamental trees, bushes, and large annuals thrive with greywater. Avoid root vegetables and leafy greens that you eat raw.</p>",
+            "page": ""
+          }
+        },
+        "faq_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much does installation cost?",
+            "icon": "price_tag",
+            "row_content": "<p>DIY installation typically costs $100-$300 for materials. Professional installation ranges from $500-$1,500 depending on system complexity.</p>",
+            "page": ""
+          }
+        },
+        "faq_4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use greywater with a septic system?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes! Diverting greywater reduces the load on your septic system, potentially extending its life and reducing pumping frequency.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4"],
+      "settings": {
+        "caption": "FAQ",
+        "heading": "Common Questions",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-1",
+        "container_color_scheme": "scheme-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_laundry",
+    "rich_text_overlap",
+    "image_with_text_1",
+    "apps",
+    "multicolumn_benefits",
+    "collage_system",
+    "multicolumn_steps",
+    "multirow_details",
+    "multicolumn_maintenance",
+    "contact_form",
+    "collapsible_content_faq"
+  ]
+}

@@ -1,0 +1,6 @@
+{% comment %}
+  Laundry to Landscape - Editable Template
+  This template uses dynamic sections that can be edited in Shopify's visual editor
+{% endcomment %}
+
+{% section 'l2l-page-content' %}

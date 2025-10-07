@@ -1,0 +1,58 @@
+{% comment %}
+  Laundry to Landscape - Custom Template with Hero and Overlapping Sections
+{% endcomment %}
+
+<style>
+  /* Custom styles for hero section margins matching header */
+  #shopify-section-image-banner-laundry .banner__content {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 5rem;
+  }
+
+  @media screen and (max-width: 749px) {
+    #shopify-section-image-banner-laundry .banner__content {
+      padding: 0 1.5rem;
+    }
+  }
+
+  /* Overlap rich text section under hero */
+  #shopify-section-rich-text-overlap {
+    margin-top: -8rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-rich-text-overlap {
+      margin-top: -12rem;
+    }
+  }
+
+  #shopify-section-rich-text-overlap .gradient {
+    background: var(--gradient-background);
+    border-radius: var(--text-boxes-radius);
+    box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+  }
+</style>
+
+<!-- Hero Section -->
+<section id="shopify-section-image-banner-laundry">
+  {% section 'image-banner' %}
+</section>
+
+<!-- Overlapping Rich Text Section -->
+<section id="shopify-section-rich-text-overlap">
+  {% section 'rich-text' %}
+</section>
+
+<!-- Rest of the page sections -->
+{% section 'image-with-text' %}
+{% section 'apps' %}
+{% section 'multicolumn' %}
+{% section 'collage' %}
+{% section 'multicolumn' %}
+{% section 'multirow' %}
+{% section 'multicolumn' %}
+{% section 'contact-form' %}
+{% section 'collapsible-content' %}

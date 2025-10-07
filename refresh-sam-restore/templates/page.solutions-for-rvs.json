@@ -1,0 +1,605 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_yfHtE4": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_n8Kiaj": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Greywater Systems for RVs</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_3WkhTn": {
+          "type": "text",
+          "settings": {
+            "text": "Embrace sustainable RV living and maximize water conservation on your adventures with Aqua2use. Our greywater recycling solutions allow RV enthusiasts to dramatically reduce water consumption, optimize wastewater management, and ensure environmental compliance wherever your travels take you.",
+            "text_style": "body"
+          }
+        },
+        "buttons_A4ekBf": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Buy Aqua2Use Pro",
+            "button_link_1": "shopify://products/aqua2use-pro",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_n8Kiaj",
+        "text_3WkhTn",
+        "buttons_A4ekBf"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/vladimir-haltakov-9J4Id8uXcQU-unsplash.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_TxYqmd": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_DeKwNM": {
+          "type": "caption",
+          "settings": {
+            "caption": "Sustainable. Efficient. Essential",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_q3je6P": {
+          "type": "heading",
+          "settings": {
+            "header_type": "h2",
+            "heading": "<strong>RV Water Recycling Made Simple</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_PPUaif": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Life on the road can limit water availability and increase dependency on dumping stations. Aqua2use transforms these challenges into opportunities, making your RV lifestyle sustainable, environmentally responsible, and convenient.</p>"
+          }
+        },
+        "text_mA7pLi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Traditional RV setups discard valuable greywater, negatively impacting the environment and incurring unnecessary costs.</p>"
+          }
+        },
+        "text_4pBV76": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Imagine reclaiming this water to irrigate lush greenery, reducing environmental strain, and saving money and time. Aqua2use greywater systems make this vision achievable, promoting eco-friendly travel.</p>"
+          }
+        },
+        "button_ERUWGh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Aqua2use Pro",
+            "button_link": "shopify://products/aqua2use-pro",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_DeKwNM",
+        "heading_q3je6P",
+        "text_PPUaif",
+        "text_mA7pLi",
+        "text_4pBV76",
+        "button_ERUWGh"
+      ],
+      "custom_css": [
+        ".gradient {margin-top: calc(var(--spacing-sections-mobile) * -1);}",
+        "@media screen and (min-width: 750px) {.gradient {margin-top: calc(var(--spacing-sections-desktop) * -1); }}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_8rzaFB": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_b7tCTz": {
+          "type": "caption",
+          "settings": {
+            "caption": "maximizes every drop",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_wHXHGb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Easy Installation for All RV Owners",
+            "heading_size": "h1"
+          }
+        },
+        "text_YWx3ng": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our user-friendly greywater system easily integrates into any RV model:</p><ul><li>Compact dimensions: 24″ L x 15″ W x 20″ H</li><li>Quick plumbing connections compatible with standard RV infrastructure</li><li>DIY-friendly setup, minimal tools required</li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_pxa4d8": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Aqua2Use",
+            "button_link": "shopify://products/aqua2use-pro",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_b7tCTz",
+        "heading_wHXHGb",
+        "text_YWx3ng",
+        "button_pxa4d8"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/1743268400__img_5279__original.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1744386107eb8fc451": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1744386194aec52c3b": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "multicolumn_m8Ai3h": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_pg7PT3": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "image": "shopify://shop_images/icon-save-money.png",
+            "title": "<strong>Instant Savings</strong>",
+            "text": "<p>Reduce campground dumping fees, freshwater purchase, and overall RV maintenance costs.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_KxH9H4": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "image": "shopify://shop_images/icon-save-water.png",
+            "title": "<strong>Conserve Up to 40,000 Gallons Annually</strong>",
+            "text": "<p>Prolong the use of your RV's water tank, reducing refill frequency.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WbdtzM": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "image": "shopify://shop_images/icon-save-yard.png",
+            "title": "<strong>Environmental Responsibility</strong>",
+            "text": "<p>Limit your RV's ecological footprint by reusing water rather than discarding it.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_pg7PT3",
+        "column_KxH9H4",
+        "column_WbdtzM"
+      ],
+      "settings": {
+        "title": "<strong>Unmatched Benefits for RV Travelers</strong>",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collage_D6qjgX": {
+      "type": "collage",
+      "blocks": {
+        "image_6yh6F6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/jon-hieb-WWHhLx8xZIA-unsplash.jpg"
+          }
+        },
+        "product_qdByhh": {
+          "type": "product",
+          "settings": {
+            "product": "aqua2use-pro",
+            "second_image": false
+          }
+        },
+        "collection_jw9B3d": {
+          "type": "collection",
+          "settings": {
+            "collection": "all"
+          }
+        }
+      },
+      "block_order": [
+        "image_6yh6F6",
+        "product_qdByhh",
+        "collection_jw9B3d"
+      ],
+      "settings": {
+        "heading": "<strong>RV Greywater System</strong>",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_DJG6MH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_BJPYmC": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Step 1: Collect</strong>",
+            "text": "<p>The Aqua2use diverts water from the laundry, wash basins, bath and shower.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gRhDec": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Step 2: Filter</strong>",
+            "text": "<p>Aqua2use state of the art, long lasting filter mats offer the best filtration available for greywater.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GHdk6g": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Step 3: Flourish</strong>",
+            "text": "<p>The filtered water is immediately and automatically pumped via subsurface dripper irrigation to your plants keeping them healthy and green.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_BJPYmC",
+        "column_gRhDec",
+        "column_GHdk6g"
+      ],
+      "settings": {
+        "title": "Aqua2use Greywater Filtration Process",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_VPBzXy": {
+      "type": "multirow",
+      "blocks": {
+        "row_X7r6cA": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/roadpass-XLW1d4eWVy0-unsplash.jpg",
+            "caption": "Contribute to a Sustainable Future",
+            "heading": "<strong>Eco-Friendly RV Travel</strong>",
+            "text": "<p>Avoid negative environmental impacts associated with improper greywater disposal:</p><ul><li>Protect aquatic ecosystems by preventing contamination.</li><li>Preserve land habitats and wildlife from harmful greywater runoff.</li><li>Maintain the natural balance of campsite ecosystems.</li></ul>",
+            "button_label": "Buy Aqua2Use",
+            "button_link": "shopify://products/aqua2use-pro"
+          }
+        },
+        "row_84jhiy": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/devon-mackay--lrJpsE6haY-unsplash.jpg",
+            "caption": "Hassle-Free Installation",
+            "heading": "<strong>Compact Design Optimized for RV Space</strong>",
+            "text": "<ul><li>Lightweight and portable, perfectly designed for tight RV compartments.</li><li>Robust, UV-resistant material ensuring durability for outdoor use.</li><li>Quiet operation suitable for peaceful RV living.</li></ul>",
+            "button_label": "Buy Aqua2Use",
+            "button_link": "shopify://products/aqua2use-pro"
+          }
+        },
+        "row_VABQYB": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/kojiro-inui-hsCNE_oyImI-unsplash.jpg",
+            "caption": "Compact Powerhouse",
+            "heading": "Economic Advantages for RV Owners",
+            "text": "<ul><li>Significant savings on water and dumping fees.</li><li>Lowered dependence on water refill stations, reducing travel costs.</li><li>Long-term cost efficiency for extended RV journeys.</li></ul>",
+            "button_label": "Buy Aqua2Use",
+            "button_link": "shopify://products/aqua2use-pro"
+          }
+        },
+        "row_XqnMT6": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/david-becker-rrfdqjJWwmU-unsplash.jpg",
+            "caption": "Affordable",
+            "heading": "<strong>Recycle 40,000+ Gallons a Year!</strong>",
+            "text": "<p>A family of four can reuse over 40,000 gallons of water each year. That means less waste and more savings!</p><ul><li>Actively contribute to environmental conservation during your travels.</li><li>Promote sustainable RV practices among the community.</li><li>Enjoy emotional satisfaction from protecting nature on every adventure.</li></ul>",
+            "button_label": "Buy Aqua2Use",
+            "button_link": "shopify://products/aqua2use-pro"
+          }
+        }
+      },
+      "block_order": [
+        "row_X7r6cA",
+        "row_84jhiy",
+        "row_VABQYB",
+        "row_XqnMT6"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "small",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_3zi6DA": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_TAzL3H": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Danger to Aquatic Life</strong>",
+            "text": "<p>Dirty greywater can carry chemicals and dirt into rivers, lakes, and ponds. This can harm fish, frogs, and other water animals by polluting their homes.</p><p></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8HfQ37": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Harm to Land Animals</strong>",
+            "text": "<p>Polluted greywater can soak into the ground and mix with water sources. This can make the environment unsafe for ducks, geese, and other animals that need clean water to survive.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9RKcTj": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Risk to Nature’s Balance</strong>",
+            "text": "<p>If greywater isn’t treated properly, harmful substances can build up and hurt the environment. This can put bees, butterflies, and other important creatures in danger, making it harder for nature to stay healthy.</p><p></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_TAzL3H",
+        "column_8HfQ37",
+        "column_9RKcTj"
+      ],
+      "settings": {
+        "title": "<strong>Manage Your Impact on Nature!</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_contact_form_QaVwFX": {
+      "type": "rich-text-contact-form",
+      "blocks": {
+        "heading_hTixbQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Stop wasting water and start living sustainably!</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_hmp4Hg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Start making a difference immediately. Incorporate Aqua2use into your RV and witness instant water conservation and financial savings.</p>"
+          }
+        },
+        "button_a9TyUd": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hTixbQ",
+        "text_hmp4Hg",
+        "button_a9TyUd"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "contact_heading": "Get in Touch"
+      }
+    },
+    "collapsible_content_tmGrrr": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_bpjMdD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What exactly does Aqua2use do for RVs?",
+            "icon": "check_mark",
+            "row_content": "<p>It efficiently recycles greywater from your RV, allowing safe reuse for irrigation and landscape watering.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tfhfiK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the filtered greywater safe for my campsite plants?",
+            "icon": "check_mark",
+            "row_content": "<p>Absolutely! The filtered water is safe for irrigating plants, keeping your campsite green and thriving.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ctJgmc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the warranty?",
+            "icon": "check_mark",
+            "row_content": "<p>All parts and the pump are covered by a 12 month replacement warranty.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PCXGpG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What maintenance is required for Aqua2use systems?",
+            "icon": "check_mark",
+            "row_content": "<p>Minimal upkeep—simply rinse the filters every 4-6 months using a hose.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bpjMdD",
+        "collapsible_row_tfhfiK",
+        "collapsible_row_ctJgmc",
+        "collapsible_row_PCXGpG"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "scheme-3",
+        "container_color_scheme": "scheme-5",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_yfHtE4",
+    "rich_text_TxYqmd",
+    "image_with_text_8rzaFB",
+    "1744386107eb8fc451",
+    "1744386194aec52c3b",
+    "multicolumn_m8Ai3h",
+    "collage_D6qjgX",
+    "multicolumn_DJG6MH",
+    "multirow_VPBzXy",
+    "multicolumn_3zi6DA",
+    "rich_text_contact_form_QaVwFX",
+    "collapsible_content_tmGrrr"
+  ]
+}

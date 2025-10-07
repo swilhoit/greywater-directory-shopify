@@ -1,0 +1,110 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "rich_text_FrhEpV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_eLcK3F": {
+          "type": "heading",
+          "settings": {
+            "header_type": "h1",
+            "heading": "Buy Greywater Systems",
+            "heading_size": "h1"
+          }
+        },
+        "text_UgBTfR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Water Wise Group greywater product offerings includes the Aqua2use Greywater Diversion Devices and Aqua2use Pro.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eLcK3F",
+        "text_UgBTfR"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_cmGQPj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Vjkqki": {
+          "type": "heading",
+          "settings": {
+            "header_type": "h2",
+            "heading": "Aqua2use Greywater Diversion Devices",
+            "heading_size": "h2"
+          }
+        },
+        "text_r67fgp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Aqua2use Greywater Diversion Devices are ideal for recycling water from your washing machine, shower, and bathroom sinks to irrigate your yard or garden. The progressive Matala filtration system safely removes impurities from the greywater for use in your yard.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Vjkqki",
+        "text_r67fgp"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": false,
+        "filter_type": "vertical",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "rich_text_FrhEpV",
+    "rich_text_cmGQPj",
+    "product-grid"
+  ]
+}

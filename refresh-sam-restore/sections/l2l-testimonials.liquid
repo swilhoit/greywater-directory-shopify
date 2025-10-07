@@ -1,0 +1,512 @@
+<style>
+  .l2l-testimonials-section {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.background_gradient }};
+    overflow: hidden;
+  }
+
+  .l2l-testimonials-container {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .l2l-testimonials-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .l2l-testimonials-header h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: {{ section.settings.heading_color }};
+    margin-bottom: 1rem;
+  }
+
+  .l2l-testimonials-header p {
+    font-size: 1.1rem;
+    color: {{ section.settings.subheading_color }};
+  }
+
+  .l2l-testimonials-wrapper {
+    position: relative;
+  }
+
+  .l2l-testimonials-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .l2l-testimonials-grid {
+      grid-template-columns: repeat({{ section.settings.columns }}, 1fr);
+    }
+  }
+
+  .l2l-testimonial-card {
+    background: {{ section.settings.card_background }};
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .l2l-testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  }
+
+  .l2l-testimonial-rating {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .l2l-star {
+    color: {{ section.settings.star_color }};
+    font-size: 1.2rem;
+  }
+
+  .l2l-star.empty {
+    opacity: 0.3;
+  }
+
+  .l2l-testimonial-content {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: {{ section.settings.content_color }};
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  .l2l-testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .l2l-author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: {{ section.settings.avatar_bg }};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+  }
+
+  .l2l-author-info {
+    flex: 1;
+  }
+
+  .l2l-author-name {
+    font-weight: 600;
+    color: {{ section.settings.name_color }};
+    margin-bottom: 0.25rem;
+  }
+
+  .l2l-author-title {
+    font-size: 0.9rem;
+    color: {{ section.settings.title_color }};
+  }
+
+  .l2l-testimonial-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: {{ section.settings.badge_bg }};
+    color: {{ section.settings.badge_color }};
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  /* Carousel styles */
+  .l2l-testimonials-carousel {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .l2l-testimonials-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .l2l-testimonials-carousel .l2l-testimonial-card {
+    flex: 0 0 calc(100% / {{ section.settings.columns }} - 2rem);
+    scroll-snap-align: start;
+  }
+
+  @media (max-width: 768px) {
+    .l2l-testimonials-carousel .l2l-testimonial-card {
+      flex: 0 0 calc(100% - 2rem);
+    }
+  }
+
+  .l2l-carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .l2l-carousel-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: {{ section.settings.button_bg }};
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+  }
+
+  .l2l-carousel-button:hover {
+    background: {{ section.settings.button_hover_bg }};
+  }
+
+  .l2l-carousel-button svg {
+    width: 20px;
+    height: 20px;
+    stroke: {{ section.settings.button_icon_color }};
+  }
+</style>
+
+<div class="l2l-testimonials-section">
+  <div class="l2l-testimonials-container">
+    {% if section.settings.heading != blank or section.settings.subheading != blank %}
+      <div class="l2l-testimonials-header">
+        {% if section.settings.heading != blank %}
+          <h2>{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.subheading != blank %}
+          <p>{{ section.settings.subheading }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="l2l-testimonials-wrapper">
+      <div class="l2l-testimonials-{% if section.settings.layout == 'carousel' %}carousel{% else %}grid{% endif %}" id="testimonials-{{ section.id }}">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'testimonial' %}
+              <div class="l2l-testimonial-card" {{ block.shopify_attributes }}>
+                {% if block.settings.badge != blank %}
+                  <span class="l2l-testimonial-badge">{{ block.settings.badge }}</span>
+                {% endif %}
+
+                {% if block.settings.rating > 0 %}
+                  <div class="l2l-testimonial-rating">
+                    {% for i in (1..5) %}
+                      <span class="l2l-star {% if i > block.settings.rating %}empty{% endif %}">★</span>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+
+                <div class="l2l-testimonial-content">
+                  "{{ block.settings.content }}"
+                </div>
+
+                <div class="l2l-testimonial-author">
+                  {% if block.settings.author_image %}
+                    <img class="l2l-author-image"
+                         src="{{ block.settings.author_image | image_url: width: 100 }}"
+                         alt="{{ block.settings.author_name }}">
+                  {% else %}
+                    <div class="l2l-author-image">
+                      {{ block.settings.author_name | slice: 0 }}
+                    </div>
+                  {% endif %}
+
+                  <div class="l2l-author-info">
+                    <div class="l2l-author-name">{{ block.settings.author_name }}</div>
+                    {% if block.settings.author_title != blank %}
+                      <div class="l2l-author-title">{{ block.settings.author_title }}</div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+
+      {% if section.settings.layout == 'carousel' %}
+        <div class="l2l-carousel-controls">
+          <button class="l2l-carousel-button" onclick="scrollTestimonials('{{ section.id }}', -1)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M15 18l-6-6 6-6"/>
+            </svg>
+          </button>
+          <button class="l2l-carousel-button" onclick="scrollTestimonials('{{ section.id }}', 1)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<script>
+  function scrollTestimonials(sectionId, direction) {
+    const carousel = document.getElementById('testimonials-' + sectionId);
+    const cardWidth = carousel.querySelector('.l2l-testimonial-card').offsetWidth;
+    const scrollAmount = (cardWidth + 32) * direction;
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+</script>
+
+{% schema %}
+{
+  "name": "L2L Testimonials",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What Our Customers Say"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Real experiences from real homeowners"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "grid",
+          "label": "Grid"
+        },
+        {
+          "value": "carousel",
+          "label": "Carousel"
+        }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "select",
+      "id": "columns",
+      "label": "Columns (Desktop)",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ],
+      "default": "3"
+    },
+    {
+      "type": "text",
+      "id": "background_gradient",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "content_color",
+      "label": "Content Color",
+      "default": "#444444"
+    },
+    {
+      "type": "color",
+      "id": "name_color",
+      "label": "Name Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#888888"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star Color",
+      "default": "#ffc107"
+    },
+    {
+      "type": "color",
+      "id": "avatar_bg",
+      "label": "Avatar Background",
+      "default": "#4a90e2"
+    },
+    {
+      "type": "color",
+      "id": "badge_bg",
+      "label": "Badge Background",
+      "default": "#28a745"
+    },
+    {
+      "type": "color",
+      "id": "badge_color",
+      "label": "Badge Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg",
+      "label": "Button Hover",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "button_icon_color",
+      "label": "Button Icon Color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Rating",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Testimonial Content",
+          "default": "Installing the L2L system was easier than I thought! We're saving hundreds of gallons each month and our fruit trees have never looked better."
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "label": "Author Name",
+          "default": "Sarah Johnson"
+        },
+        {
+          "type": "text",
+          "id": "author_title",
+          "label": "Author Title/Location",
+          "default": "Homeowner, California"
+        },
+        {
+          "type": "image_picker",
+          "id": "author_image",
+          "label": "Author Image"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge Text",
+          "info": "e.g., 'Verified', 'DIY Install'"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "L2L Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "content": "The L2L system paid for itself in just 6 months! Our water bill dropped significantly and our garden has never been greener.",
+            "author_name": "Mike Chen",
+            "author_title": "Homeowner, Arizona",
+            "badge": "Verified"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "content": "As a plumber, I recommend L2L systems to all my clients. Simple, effective, and no maintenance headaches.",
+            "author_name": "Robert Davis",
+            "author_title": "Licensed Plumber",
+            "badge": "Pro Installer"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "content": "We installed it ourselves in one weekend. The instructions were clear and now we're saving water every laundry day!",
+            "author_name": "Emily Rodriguez",
+            "author_title": "DIY Enthusiast",
+            "badge": "DIY Install"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,51 @@
+{
+  "city_name": "Tucson",
+  "state": "Arizona",
+  "hero_subheading": "Perfect for Tucson's desert climate - save water and money while creating a desert oasis",
+  "water_district": "Tucson Water",
+  "permit_required": false,
+  "permit_info": "No permit required for single washing machine systems under Arizona regulations",
+  "local_codes": "Follow Arizona Department of Environmental Quality guidelines",
+  "rebate_program": "Tucson Water Rebate Program",
+  "rebate_amount": "$1000",
+  "rebate_url": "https://www.tucsonaz.gov/water/rebate",
+  "annual_water_savings": "20,000",
+  "annual_cost_savings": "$600",
+  "water_savings_percent": "45",
+  "drought_days": "300",
+  "water_cost_per_gallon": "0.03",
+  "average_rainfall": "12 inches",
+  "climate_zone": "Desert/Arid",
+  "installers": [
+    {
+      "name": "Desert Water Harvesting",
+      "phone": "(520) 555-0001",
+      "website": "example.com",
+      "certified": true
+    },
+    {
+      "name": "Sonoran Greywater Solutions",
+      "phone": "(520) 555-0002",
+      "certified": true
+    }
+  ],
+  "resources": [
+    {
+      "title": "Tucson Water Conservation Guide",
+      "url": "#",
+      "type": "guide"
+    },
+    {
+      "title": "Desert-Adapted Plants for Greywater",
+      "url": "#",
+      "type": "plant-guide"
+    }
+  ],
+  "local_tips": [
+    "Use native desert plants that thrive with greywater",
+    "Install shade mulch basins to reduce evaporation",
+    "Schedule laundry during cooler morning hours",
+    "Consider cistern storage for monsoon season",
+    "Choose low-sodium, plant-friendly detergents"
+  ]
+}

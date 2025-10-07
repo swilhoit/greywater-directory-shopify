@@ -1,0 +1,72 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_Qt9y3Y": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_qrTY9t": {
+          "type": "heading",
+          "source": "{{ metaobject }}",
+          "settings": {
+            "heading": "{{ metaobject.installer_name.value }}"
+          }
+        },
+        "caption_7DtgcN": {
+          "type": "caption",
+          "settings": {
+            "caption": "{{ metaobject.location.value }}",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "text_cLJMYz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ metaobject.about | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        },
+        "button_bG8eT7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Business Website",
+            "button_link": "{{ metaobject.system.url }}",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_qrTY9t",
+        "caption_7DtgcN",
+        "text_cLJMYz",
+        "button_bG8eT7"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_with_text_Qt9y3Y"
+  ]
+}

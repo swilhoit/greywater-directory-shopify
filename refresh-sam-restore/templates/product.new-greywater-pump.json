@@ -1,0 +1,480 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "body"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "rating",
+        "description",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "jump_links_H38DBw": {
+      "type": "jump-links",
+      "blocks": {
+        "link_B9gmwr": {
+          "type": "link",
+          "settings": {
+            "link_label": "Description",
+            "link_url": "#description"
+          }
+        },
+        "link_UXwc3W": {
+          "type": "link",
+          "settings": {
+            "link_label": "How It Works",
+            "link_url": "#how-it-works"
+          }
+        },
+        "link_jJEFmm": {
+          "type": "link",
+          "settings": {
+            "link_label": "Reviews",
+            "link_url": "#reviews"
+          }
+        },
+        "link_MkeMyF": {
+          "type": "link",
+          "settings": {
+            "link_label": "Product FAQ",
+            "link_url": "#product-faq"
+          }
+        }
+      },
+      "block_order": [
+        "link_B9gmwr",
+        "link_UXwc3W",
+        "link_jJEFmm",
+        "link_MkeMyF"
+      ],
+      "settings": {}
+    },
+    "jump_section_8PjEaT": {
+      "type": "jump-section",
+      "settings": {
+        "section_id": "description"
+      }
+    },
+    "multicolumn_FHWNg6": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Y9z8Eh": {
+          "type": "column",
+          "settings": {
+            "title": "Matala Replacement Filters",
+            "text": "<p>The Aqua2use greywater Matala filters are made to be taken out and hosed down periodically to remove the built up lint and debris. We recommend removing the Matala filters and hosing them down once every 6 months. After 3 years, depending on the extent of your greywater filter usage, it is highly recommended that you replace the Matala greywater filters with new ones. It is very simple to remove the old filters and install the new ones in your Aqua2use GWDD or Gravity unit. The complete set of 6 Matala filters takes less than 5 minutes to change out with new ones.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gmFjre": {
+          "type": "column",
+          "settings": {
+            "title": "Aqua2use Greywater Filtration Steps",
+            "text": "<p><strong>Step 1</strong>: When the diverting valve’s arrow is pointing away from the filter, greywater flows direct to the sewer.<br/><strong>Step 2</strong>: When the diverting valve’s arrow is pointing towards the Aqua2use greywater unit, greywater from the house (whether the shower, bath, or laundry) is diverted to the inlet of the greywater filter.<br/><strong>Step 3</strong>: The greywater flows through the 1st progressive Matala filtration chamber that retains major and medium particles such as hair, lint, paper, detergent clogs and other impurities. (The greywater filter pads: Black is low density, Green is medium density)<br/><strong>Step 4</strong>: The greywater flows through the 2nd progressive Matala filtration chamber that retains medium and small particles (The filter pads: Green is medium density, Blue is high density)<br/><strong>Step 5</strong>: The greywater flows through the 3rd progressive Matala filtration chamber that retains small and minor particles (The filter pads: Blue is high density, Grey is super high density)<br/><strong>Step 6</strong>: The filtered greywater is pumped to the irrigation drip line in your yard or garden</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Y9z8Eh",
+        "column_gmFjre"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "jump_section_xYCcCU": {
+      "type": "jump-section",
+      "settings": {
+        "section_id": "how-it-works"
+      }
+    },
+    "image_with_text_DgtRAT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_QfaKYY": {
+          "type": "heading",
+          "settings": {
+            "heading": "How Greywater Systems Work",
+            "heading_size": "h1"
+          }
+        },
+        "text_Cfnqqh": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Step 1: Collect</h3><p>The Aqua2use Pro diverts water from the laundry, wash basins, bath and shower.</p><h3>Step 2: Filter</h3><p>Aqua2use state of the art, long lasting filter mats offer the best filtration available for greywater.</p><h3>Step 3: Flourish</h3><p>The filtered water is immediately and automatically pumped via subsurface dripper irrigation to your plants keeping them healthy and green.</p>",
+            "text_style": "body"
+          }
+        },
+        "caption_8KkeTy": {
+          "type": "caption",
+          "settings": {
+            "caption": "Aqua2use® greywater diverter captures and pre-filters your recycled bath, shower, wash basin and laundry greywater, diverting it from going into your septic or sewage system. This now filtered greywater can be used to irrigate your lawn and garden. Saving you water and providing your plants with nutrient rich greywater, as well as reducing the energy of transporting full amounts of wastewater to the sewage treatment plant. The Aqua2use® products have the best greywater recycling systems and is designed with the goal of simple installation, easy maintain and affordable cost. Your actions today determine how the world is going to be tomorrow!",
+            "text_style": "subtitle",
+            "text_size": "small"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QfaKYY",
+        "text_Cfnqqh",
+        "caption_8KkeTy"
+      ],
+      "custom_css": [
+        "img {object-fit: contain;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/gwdd-how-it-works_994e03a9-c100-4ab0-aa68-750229aba853.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "jump_section_VWtFxY": {
+      "type": "jump-section",
+      "settings": {
+        "section_id": "reviews"
+      }
+    },
+    "172002404931dc17cf": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_J7wYcV": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_J7wYcV"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "jump_section_pPghrf": {
+      "type": "jump-section",
+      "settings": {
+        "section_id": "product-faq"
+      }
+    },
+    "collapsible_content_fPDEQC": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_N3taYB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the Aqua2use?",
+            "icon": "none",
+            "row_content": "<p>The Aqua2use is the most advanced Greywater System on the market.<br/>It is designed to help you easily reuse your waste water from your laundry, bath and shower.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jFFt7b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is it safe to use the Aqua2use to irrigate my garden?",
+            "icon": "none",
+            "row_content": "<p>It is absolutely safe to use greywater to water your plants and your trees. Your system needs to be connected to a drip irrigation system, and you should use low phosphate detergent . The filtering system of the Aqua2use is the best on the market, and will intercept lint and other impurities.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_YgJLqA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does the water look grey?",
+            "icon": "none",
+            "row_content": "<p>No, you will be surprised by how clear the water looks like after filtration by the Aqua2use. You will not water your plants with soapy and “grey looking” water!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_W36xUm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does it work?",
+            "icon": "none",
+            "row_content": "<p>After being installed by one of our preferred installer or your plumber, the Aqua2use is connected and the water coming from your laundry, bath or shower flows into the unit. The greywater is filtered through the unique 4 Stage filtration system stage. The level detecting pump then pumps the filtered water into your irrigation system.  This all happens automatically.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WWi4Xk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What can I connect my unit to?",
+            "icon": "none",
+            "row_content": "<p>You can connect your unit to any grey waste water from your house, that includes the water coming from your laundry, bath and shower. This EXCLUDES water from the kitchen sink, dishwashers and toilets, which is classed as black water. Check your local regulations with your plumber or local water authority.</p><p>For a worry free installation, we recommend contacting one of our preferred installers.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xziE6x": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What do I need before I connect my unit?",
+            "icon": "none",
+            "row_content": "<p>You will need a 110 volt power outlet.  The unit comes with a 16′ long extension cord that is ready to plug right into your GFI outlet.<br/>You need to be able to access your waste plumbing pipes.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kFX6Dd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why can’t I connect it to my sink in the kitchen?",
+            "icon": "none",
+            "row_content": "<p>It is not advisable to try to reuse sink water. This water may contain many nutrients, food particles, oil and harsh detergents, which are not suitable for reuse. Sink water and dishwasher discharge water is considered to be Black Water and is considered waste.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PkenPq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the warranty?",
+            "icon": "none",
+            "row_content": "<p>All parts and the pump are covered by a 12 month replacement warranty.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_NB6CRn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How effective are the filters?",
+            "icon": "none",
+            "row_content": "<p>The Aqua2use has over 108 sqft of surface area ensuring the best filtration available for recycled greywater.<br/>Standard types of filtration such as mesh filters are prone to blocking by the nature of what is in greywater. Lint is especially good at blocking single dimensional screen filters.</p><p>Independent laboratory tests have shown that the Aqua2use can remove up to 90% of suspended solids.<br/>There is nothing on the market that comes close to this amount of filtration.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_W7JpCh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How often do I have to replace or clean the filters?",
+            "icon": "none",
+            "row_content": "<p>The filters are designed to be cleaned over and over so you don’ need to replace them.<br/>Testing in the field has shown that up to 15,000 gallons can pass through the unit before they need cleaning. The recommended cleaning cycle is from 4-6 months, depending on how many people are using the system. Dispose of waste thoughtfully and wear protective gloves when cleaning.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9xQMx7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the best way to disperse the greywater?",
+            "icon": "none",
+            "row_content": "<p>Water authorities recommend dispersal of greywater via drip system.<br/>Each garden has different requirements. Your installer should advise you on this.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ah6DdY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I store the water once it has been through the Matala Aqua2use?",
+            "icon": "none",
+            "row_content": "<p>It is not advisable to store greywater from any greywater diversion device for more that 24 hours. The Aqua2use will empty on demand if there is sufficient water to activate the upper float switch, or automatically on a 24 hour cycle with the “smart” controller.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_QUxeL9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much water does my unit save me?",
+            "icon": "none",
+            "row_content": "<p>Independent tests have shown you can expect to save approx 30 gallons per person per day.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BFi8kW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why don’ you use a low voltage pump like a 12volt unit?",
+            "icon": "none",
+            "row_content": "<p>Yes the pump and filters can handle water at elevated temperatures.<br/>Boiling water should not be discharged in to any greywater diversion device.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3L6wKt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does it work with my water softener?",
+            "icon": "none",
+            "row_content": "<p>The Aqua2use will work with your water softener. Using potassium instead of salt inside your water softener will guarantee that your plants stay healthy.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_AkyQfd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I buy spare parts for my unit?",
+            "icon": "none",
+            "row_content": "<p>We can provide spare filters and all other parts in the unit.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CphtQh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does this unit break down in the sun?",
+            "icon": "none",
+            "row_content": "<p>No, it is made of UV resistant High Grade Poly Ethylene.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_N3taYB",
+        "collapsible_row_jFFt7b",
+        "collapsible_row_YgJLqA",
+        "collapsible_row_W36xUm",
+        "collapsible_row_WWi4Xk",
+        "collapsible_row_xziE6x",
+        "collapsible_row_kFX6Dd",
+        "collapsible_row_PkenPq",
+        "collapsible_row_NB6CRn",
+        "collapsible_row_W7JpCh",
+        "collapsible_row_9xQMx7",
+        "collapsible_row_ah6DdY",
+        "collapsible_row_QUxeL9",
+        "collapsible_row_BFi8kW",
+        "collapsible_row_3L6wKt",
+        "collapsible_row_AkyQfd",
+        "collapsible_row_CphtQh"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "related-products",
+    "main",
+    "jump_links_H38DBw",
+    "jump_section_8PjEaT",
+    "multicolumn_FHWNg6",
+    "jump_section_xYCcCU",
+    "image_with_text_DgtRAT",
+    "jump_section_VWtFxY",
+    "172002404931dc17cf",
+    "jump_section_pPghrf",
+    "collapsible_content_fPDEQC"
+  ]
+}

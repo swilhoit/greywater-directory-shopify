@@ -1,0 +1,120 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "sort": "alphabetical",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "columns_mobile": "2"
+      }
+    },
+    "rich_text_FrhEpT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_eLcK3F": {
+          "type": "heading",
+          "settings": {
+            "header_type": "h1",
+            "heading": "Water Wise Group Products",
+            "heading_size": "h1"
+          }
+        },
+        "text_UgBTfR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Greywater Systems and Filters accommodate all types of usage.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eLcK3F",
+        "text_UgBTfR"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_cmGQPI": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Vjkqki": {
+          "type": "heading",
+          "settings": {
+            "header_type": "h2",
+            "heading": "Aqua2Use Greywater Systems",
+            "heading_size": "h2"
+          }
+        },
+        "text_r67fgp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All of our Aqua2Use Greywater Systems use our state of the art progressive filtration system to remove impurities before irrigating your outdoor areas. If you plan to connect 3 or more fixtures (sink, shower, washer) we recommend using the Aqua2Use Pro.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Vjkqki",
+        "text_r67fgp"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_Q8BfQB": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_FrhEpT",
+    "rich_text_cmGQPI",
+    "featured_collection_Q8BfQB"
+  ]
+}

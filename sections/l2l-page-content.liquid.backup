@@ -1,0 +1,556 @@
+{{ 'section-l2l-page.css' | asset_url | stylesheet_tag }}
+
+<div class="l2l-page color-{{ section.settings.color_scheme }}">
+  <!-- Hero Section with Side-by-Side Layout -->
+  {% if section.settings.show_hero %}
+  <div class="l2l-hero page-width" style="background: {{ section.settings.hero_gradient }};">
+    <div class="l2l-hero-wrapper">
+      <div class="l2l-hero-content">
+        <h1>{{ section.settings.hero_title }}</h1>
+        <p>{{ section.settings.hero_subtitle }}</p>
+        {% if section.settings.hero_button_text != blank %}
+          <a href="{{ section.settings.hero_button_link }}" class="button button--primary">{{ section.settings.hero_button_text }}</a>
+        {% endif %}
+      </div>
+      <div class="l2l-hero-image">
+        {% if section.settings.hero_image %}
+          <img src="{{ section.settings.hero_image | img_url: '1200x' }}"
+               alt="{{ section.settings.hero_image.alt | default: section.settings.hero_title | escape }}"
+               loading="eager"
+               width="600"
+               height="400">
+        {% else %}
+          <div class="l2l-hero-image-placeholder">
+            <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="600" height="400" fill="#e0e0e0"/>
+              <text x="50%" y="50%" text-anchor="middle" fill="#999" font-size="24">Add Hero Image</text>
+            </svg>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="l2l-section page-width">
+    <!-- Intro Section -->
+    {% if section.settings.show_intro %}
+    <div class="l2l-intro">
+      <h2>{{ section.settings.intro_title }}</h2>
+      <div class="rte">{{ section.settings.intro_content }}</div>
+      {% if section.settings.intro_image %}
+        <div class="l2l-image-container">
+          <img src="{{ section.settings.intro_image | img_url: '1200x' }}"
+               alt="{{ section.settings.intro_image.alt | escape }}"
+               loading="lazy">
+        </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <!-- Component Cards -->
+    {% if section.blocks.size > 0 %}
+    <div class="l2l-blocks-container">
+      {% for block in section.blocks %}
+        {% case block.type %}
+
+          {% when 'component_card' %}
+            <div class="l2l-card" {{ block.shopify_attributes }}>
+              {% if block.settings.card_image %}
+                <div class="l2l-card-image">
+                  <img src="{{ block.settings.card_image | img_url: '600x400' }}"
+                       alt="{{ block.settings.card_image.alt | escape }}"
+                       loading="lazy">
+                </div>
+              {% endif %}
+              <div class="l2l-card-content">
+                {% if block.settings.icon != blank %}
+                  <div class="l2l-icon">{{ block.settings.icon }}</div>
+                {% endif %}
+                <h3>{{ block.settings.title }}</h3>
+                <p>{{ block.settings.description }}</p>
+              </div>
+            </div>
+
+          {% when 'benefit_item' %}
+            <div class="l2l-benefit-item" {{ block.shopify_attributes }}>
+              <span class="l2l-check">✓</span>
+              <span>{{ block.settings.benefit_text }}</span>
+            </div>
+
+          {% when 'installation_step' %}
+            <div class="l2l-step" data-step="{{ forloop.index }}" {{ block.shopify_attributes }}>
+              <h3>{{ block.settings.step_title }}</h3>
+              <p>{{ block.settings.step_description }}</p>
+              {% if block.settings.step_image %}
+                <img src="{{ block.settings.step_image | img_url: '800x' }}"
+                     alt="{{ block.settings.step_image.alt | escape }}"
+                     loading="lazy">
+              {% endif %}
+            </div>
+
+          {% when 'text_section' %}
+            <div class="l2l-text-section" {{ block.shopify_attributes }}>
+              <h2>{{ block.settings.section_title }}</h2>
+              <div class="rte">{{ block.settings.section_content }}</div>
+            </div>
+
+          {% when 'image_gallery' %}
+            <div class="l2l-gallery" {{ block.shopify_attributes }}>
+              {% if block.settings.gallery_title != blank %}
+                <h2>{{ block.settings.gallery_title }}</h2>
+              {% endif %}
+              <div class="l2l-gallery-grid columns-{{ block.settings.columns | default: '3' }}">
+                {% for i in (1..6) %}
+                  {% capture image_setting %}image_{{ i }}{% endcapture %}
+                  {% if block.settings[image_setting] %}
+                    <div class="l2l-gallery-item">
+                      <img src="{{ block.settings[image_setting] | img_url: '800x' }}"
+                           alt="{{ block.settings[image_setting].alt | escape }}"
+                           loading="lazy">
+                      {% capture caption_setting %}caption_{{ i }}{% endcapture %}
+                      {% if block.settings[caption_setting] != blank %}
+                        <div class="l2l-gallery-caption">{{ block.settings[caption_setting] }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+
+          {% when 'cta_section' %}
+            <div class="l2l-cta" style="background: {{ block.settings.cta_background }}" {{ block.shopify_attributes }}>
+              <h2>{{ block.settings.cta_title }}</h2>
+              <p>{{ block.settings.cta_description }}</p>
+              <a href="{{ block.settings.cta_button_link }}" class="l2l-button">
+                {{ block.settings.cta_button_text }}
+              </a>
+            </div>
+
+          {% when 'image_with_text' %}
+            <div class="l2l-image-text {{ block.settings.layout }}" {{ block.shopify_attributes }}>
+              <div class="l2l-image-text-media">
+                {% if block.settings.image %}
+                  <img src="{{ block.settings.image | img_url: '1200x' }}"
+                       alt="{{ block.settings.image.alt | escape }}"
+                       loading="lazy">
+                {% else %}
+                  <div class="l2l-image-placeholder">
+                    <span>{{ block.settings.title | default: 'Add Image' }}</span>
+                  </div>
+                {% endif %}
+              </div>
+              <div class="l2l-image-text-content">
+                {% if block.settings.title != blank %}
+                  <h2>{{ block.settings.title }}</h2>
+                {% endif %}
+                <div class="rte">{{ block.settings.content }}</div>
+                {% if block.settings.button_text != blank %}
+                  <a href="{{ block.settings.button_link }}" class="l2l-button">
+                    {{ block.settings.button_text }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+
+          {% when 'full_width_image' %}
+            <div class="l2l-full-image" {{ block.shopify_attributes }}>
+              {% if block.settings.image %}
+                <img src="{{ block.settings.image | img_url: '2400x' }}"
+                     alt="{{ block.settings.image.alt | escape }}"
+                     loading="lazy">
+                {% if block.settings.overlay_text != blank %}
+                  <div class="l2l-image-overlay">
+                    <h2>{{ block.settings.overlay_text }}</h2>
+                  </div>
+                {% endif %}
+              {% endif %}
+            </div>
+
+          {% when 'custom_liquid' %}
+            <div class="l2l-custom" {{ block.shopify_attributes }}>
+              {{ block.settings.custom_liquid }}
+            </div>
+
+        {% endcase %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "L2L Page Content",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hero",
+      "label": "Show hero section",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero background image"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero title",
+      "default": "Laundry to Landscape Greywater Systems"
+    },
+    {
+      "type": "text",
+      "id": "hero_subtitle",
+      "label": "Hero subtitle",
+      "default": "Transform your washing machine water into a sustainable irrigation solution"
+    },
+    {
+      "type": "text",
+      "id": "hero_gradient",
+      "label": "Hero gradient CSS (if no image)",
+      "default": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      "info": "Enter a CSS gradient value - used when no hero image is selected"
+    },
+    {
+      "type": "text",
+      "id": "hero_button_text",
+      "label": "Hero button text"
+    },
+    {
+      "type": "url",
+      "id": "hero_button_link",
+      "label": "Hero button link"
+    },
+    {
+      "type": "header",
+      "content": "Introduction Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_intro",
+      "label": "Show introduction",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "intro_title",
+      "label": "Introduction title",
+      "default": "What is a Laundry to Landscape System?"
+    },
+    {
+      "type": "richtext",
+      "id": "intro_content",
+      "label": "Introduction content",
+      "default": "<p>A Laundry to Landscape (L2L) greywater system is one of the simplest and most affordable ways to reuse household water. It diverts washing machine water directly to your landscape without altering household plumbing.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "intro_image",
+      "label": "Introduction image"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "Accent 1"
+        },
+        {
+          "value": "accent-2",
+          "label": "Accent 2"
+        },
+        {
+          "value": "background-1",
+          "label": "Background 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Background 2"
+        },
+        {
+          "value": "inverse",
+          "label": "Inverse"
+        }
+      ],
+      "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "component_card",
+      "name": "Component Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card image (optional)"
+        },
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji or text)",
+          "default": "💧"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Component Name"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    },
+    {
+      "type": "benefit_item",
+      "name": "Benefit Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "benefit_text",
+          "label": "Benefit text",
+          "default": "Saves water and money"
+        }
+      ]
+    },
+    {
+      "type": "installation_step",
+      "name": "Installation Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "step_title",
+          "label": "Step title",
+          "default": "Step Title"
+        },
+        {
+          "type": "textarea",
+          "id": "step_description",
+          "label": "Step description"
+        },
+        {
+          "type": "image_picker",
+          "id": "step_image",
+          "label": "Step image (optional)"
+        }
+      ]
+    },
+    {
+      "type": "text_section",
+      "name": "Text Section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "section_title",
+          "label": "Section title"
+        },
+        {
+          "type": "richtext",
+          "id": "section_content",
+          "label": "Section content"
+        }
+      ]
+    },
+    {
+      "type": "image_gallery",
+      "name": "Image Gallery",
+      "settings": [
+        {
+          "type": "text",
+          "id": "gallery_title",
+          "label": "Gallery title"
+        },
+        {
+          "type": "select",
+          "id": "columns",
+          "label": "Images per row",
+          "options": [
+            { "value": "2", "label": "2 columns" },
+            { "value": "3", "label": "3 columns" },
+            { "value": "4", "label": "4 columns" }
+          ],
+          "default": "3"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "Image 1"
+        },
+        {
+          "type": "text",
+          "id": "caption_1",
+          "label": "Caption 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Image 2"
+        },
+        {
+          "type": "text",
+          "id": "caption_2",
+          "label": "Caption 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Image 3"
+        },
+        {
+          "type": "text",
+          "id": "caption_3",
+          "label": "Caption 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "Image 4"
+        },
+        {
+          "type": "text",
+          "id": "caption_4",
+          "label": "Caption 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_5",
+          "label": "Image 5"
+        },
+        {
+          "type": "text",
+          "id": "caption_5",
+          "label": "Caption 5"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_6",
+          "label": "Image 6"
+        },
+        {
+          "type": "text",
+          "id": "caption_6",
+          "label": "Caption 6"
+        }
+      ]
+    },
+    {
+      "type": "image_with_text",
+      "name": "Image with Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "layout",
+          "label": "Layout",
+          "options": [
+            { "value": "image-left", "label": "Image on left" },
+            { "value": "image-right", "label": "Image on right" }
+          ],
+          "default": "image-left"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "full_width_image",
+      "name": "Full Width Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text",
+          "label": "Overlay text (optional)"
+        }
+      ]
+    },
+    {
+      "type": "cta_section",
+      "name": "Call to Action",
+      "settings": [
+        {
+          "type": "text",
+          "id": "cta_title",
+          "label": "CTA title",
+          "default": "Ready to Get Started?"
+        },
+        {
+          "type": "text",
+          "id": "cta_description",
+          "label": "CTA description"
+        },
+        {
+          "type": "text",
+          "id": "cta_button_text",
+          "label": "Button text",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "cta_button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "text",
+          "id": "cta_background",
+          "label": "Background CSS",
+          "default": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+        }
+      ]
+    },
+    {
+      "type": "custom_liquid",
+      "name": "Custom Liquid",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom Liquid code"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "L2L Page Content"
+    }
+  ]
+}
+{% endschema %}

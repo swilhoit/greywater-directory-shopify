@@ -1,0 +1,61 @@
+{
+  "city_name": "Los Angeles",
+  "state": "California",
+  "hero_subheading": "LA's water-smart solution - turn your washing machine into a garden irrigation system",
+  "water_district": "LADWP",
+  "permit_required": false,
+  "permit_info": "California allows permit-free laundry-to-landscape systems",
+  "local_codes": "California Plumbing Code Chapter 16A",
+  "rebate_program": "LADWP Greywater Rebate Program",
+  "rebate_amount": "$400",
+  "rebate_url": "https://www.ladwp.com/rebates",
+  "annual_water_savings": "15,000",
+  "annual_cost_savings": "$550",
+  "water_savings_percent": "40",
+  "drought_days": "200",
+  "water_cost_per_gallon": "0.037",
+  "average_rainfall": "15 inches",
+  "climate_zone": "Mediterranean",
+  "installers": [
+    {
+      "name": "LA Greywater Solutions",
+      "phone": "(323) 555-0001",
+      "website": "example.com",
+      "certified": true
+    },
+    {
+      "name": "SoCal Water Wise",
+      "phone": "(310) 555-0002",
+      "certified": true
+    },
+    {
+      "name": "Green LA Landscaping",
+      "phone": "(818) 555-0003",
+      "certified": true
+    }
+  ],
+  "resources": [
+    {
+      "title": "LADWP Conservation Programs",
+      "url": "#",
+      "type": "program"
+    },
+    {
+      "title": "California Greywater Standards",
+      "url": "#",
+      "type": "regulations"
+    },
+    {
+      "title": "Drought Tolerant Plants for LA",
+      "url": "#",
+      "type": "plant-guide"
+    }
+  ],
+  "local_tips": [
+    "Perfect for fruit trees and ornamental gardens",
+    "Use California natives for best results",
+    "Rotate irrigation zones seasonally",
+    "Install surge tanks for better distribution",
+    "Take advantage of LADWP's free mulch program"
+  ]
+}

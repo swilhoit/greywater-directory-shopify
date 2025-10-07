@@ -1,0 +1,61 @@
+{
+  "city_name": "Austin",
+  "state": "Texas",
+  "hero_subheading": "Keep Austin green and weird - recycle your laundry water for a thriving Texas landscape",
+  "water_district": "Austin Water",
+  "permit_required": false,
+  "permit_info": "No permit needed for single-source laundry systems in Texas",
+  "local_codes": "Follow Texas Commission on Environmental Quality guidelines",
+  "rebate_program": "Austin Water Conservation Rebates",
+  "rebate_amount": "$500",
+  "rebate_url": "https://www.austintexas.gov/department/water-conservation-rebates",
+  "annual_water_savings": "18,000",
+  "annual_cost_savings": "$480",
+  "water_savings_percent": "42",
+  "drought_days": "150",
+  "water_cost_per_gallon": "0.027",
+  "average_rainfall": "34 inches",
+  "climate_zone": "Humid Subtropical",
+  "installers": [
+    {
+      "name": "Hill Country Greywater",
+      "phone": "(512) 555-0001",
+      "website": "example.com",
+      "certified": true
+    },
+    {
+      "name": "Austin Eco Systems",
+      "phone": "(512) 555-0002",
+      "certified": true
+    },
+    {
+      "name": "Texas Water Wise",
+      "phone": "(512) 555-0003",
+      "certified": true
+    }
+  ],
+  "resources": [
+    {
+      "title": "Austin Water Conservation Programs",
+      "url": "#",
+      "type": "program"
+    },
+    {
+      "title": "Texas Native Plants Guide",
+      "url": "#",
+      "type": "plant-guide"
+    },
+    {
+      "title": "Hill Country Rainwater Harvesting",
+      "url": "#",
+      "type": "guide"
+    }
+  ],
+  "local_tips": [
+    "Combine with rainwater harvesting for maximum efficiency",
+    "Plant Texas natives like Turk's Cap and Esperanza",
+    "Mulch heavily to retain moisture in summer heat",
+    "Consider overflow to rain gardens during wet season",
+    "Schedule irrigation for early morning to reduce evaporation"
+  ]
+}

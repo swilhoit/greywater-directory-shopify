@@ -1,0 +1,243 @@
+{% comment %}
+  Features Section for L2L Pages - Individual Metafields Version
+  Uses individual metafields instead of JSON array
+{% endcomment %}
+
+{% liquid
+  # Get individual feature metafields
+  assign feature1_title = page.metafields.l2l_individual.feature1_title
+  assign feature1_description = page.metafields.l2l_individual.feature1_description
+  assign feature1_icon = page.metafields.l2l_individual.feature1_icon
+
+  assign feature2_title = page.metafields.l2l_individual.feature2_title
+  assign feature2_description = page.metafields.l2l_individual.feature2_description
+  assign feature2_icon = page.metafields.l2l_individual.feature2_icon
+
+  assign feature3_title = page.metafields.l2l_individual.feature3_title
+  assign feature3_description = page.metafields.l2l_individual.feature3_description
+  assign feature3_icon = page.metafields.l2l_individual.feature3_icon
+
+  # Check if we have metafield data
+  assign has_metafield_features = false
+  if feature1_title != blank or feature2_title != blank or feature3_title != blank
+    assign has_metafield_features = true
+  endif
+%}
+
+<section class="l2l-features section-{{ section.id }}-padding">
+  <div class="container">
+    {% if section.settings.heading %}
+      <h2 class="l2l-features__heading h2 center">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+
+    {% if section.settings.subheading %}
+      <p class="l2l-features__subheading center">
+        {{ section.settings.subheading }}
+      </p>
+    {% endif %}
+
+    <div class="l2l-features__grid">
+      {% if has_metafield_features %}
+        {% comment %} Use individual metafield data {% endcomment %}
+
+        {% if feature1_title != blank %}
+          <div class="l2l-features__item">
+            {% if feature1_icon != blank %}
+              <div class="l2l-features__icon">{{ feature1_icon }}</div>
+            {% endif %}
+            <h3 class="l2l-features__title">{{ feature1_title }}</h3>
+            {% if feature1_description != blank %}
+              <p class="l2l-features__description">{{ feature1_description }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if feature2_title != blank %}
+          <div class="l2l-features__item">
+            {% if feature2_icon != blank %}
+              <div class="l2l-features__icon">{{ feature2_icon }}</div>
+            {% endif %}
+            <h3 class="l2l-features__title">{{ feature2_title }}</h3>
+            {% if feature2_description != blank %}
+              <p class="l2l-features__description">{{ feature2_description }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if feature3_title != blank %}
+          <div class="l2l-features__item">
+            {% if feature3_icon != blank %}
+              <div class="l2l-features__icon">{{ feature3_icon }}</div>
+            {% endif %}
+            <h3 class="l2l-features__title">{{ feature3_title }}</h3>
+            {% if feature3_description != blank %}
+              <p class="l2l-features__description">{{ feature3_description }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+
+      {% else %}
+        {% comment %} Fall back to section blocks {% endcomment %}
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'feature' %}
+              <div class="l2l-features__item" {{ block.shopify_attributes }}>
+                {% if block.settings.icon %}
+                  <div class="l2l-features__icon">{{ block.settings.icon }}</div>
+                {% endif %}
+                <h3 class="l2l-features__title">{{ block.settings.title }}</h3>
+                {% if block.settings.description %}
+                  <p class="l2l-features__description">{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
+          {% endcase %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "L2L Features (Individual)",
+  "tag": "section",
+  "class": "l2l-features-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section heading",
+      "default": "Why Choose L2L Systems?"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Discover the benefits of laundry to landscape greywater systems"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji)",
+          "default": "🌱"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Easy Installation"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Quick setup with basic plumbing skills"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "L2L Features (Individual)",
+      "blocks": [
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .l2l-features {
+    background: #f8f9fa;
+  }
+
+  .l2l-features__heading {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+
+  .l2l-features__subheading {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+  }
+
+  .l2l-features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .l2l-features__item {
+    text-align: center;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+
+  .l2l-features__item:hover {
+    transform: translateY(-5px);
+  }
+
+  .l2l-features__icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .l2l-features__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+
+  .l2l-features__description {
+    color: #7f8c8d;
+    line-height: 1.6;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  @media (max-width: 768px) {
+    .l2l-features__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

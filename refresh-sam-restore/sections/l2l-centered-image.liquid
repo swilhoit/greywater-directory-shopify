@@ -1,0 +1,317 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.background_color }};
+  }
+
+  #shopify-section-{{ section.id }} .l2l-centered-image-container {
+    max-width: {{ section.settings.max_width }}px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .l2l-centered-image-headline {
+    margin-bottom: {{ section.settings.headline_spacing }}px;
+  }
+
+  #shopify-section-{{ section.id }} h2 {
+    font-size: {{ section.settings.headline_size }}rem;
+    font-weight: {{ section.settings.headline_weight }};
+    color: {{ section.settings.headline_color }};
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .l2l-centered-image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: {{ section.settings.image_max_width }}px;
+    margin: 0 auto;
+  }
+
+  #shopify-section-{{ section.id }} img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: {{ section.settings.image_border_radius }}px;
+  }
+
+  #shopify-section-{{ section.id }} .image-shadow {
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  }
+
+  #shopify-section-{{ section.id }} .l2l-centered-image-caption {
+    margin-top: 1rem;
+    font-size: {{ section.settings.caption_size }}rem;
+    color: {{ section.settings.caption_color }};
+    font-style: {{ section.settings.caption_style }};
+  }
+
+  @media screen and (max-width: 768px) {
+    #shopify-section-{{ section.id }} h2 {
+      font-size: {{ section.settings.headline_size | times: 0.8 }}rem;
+    }
+  }
+</style>
+
+<div class="l2l-centered-image-container">
+  {% if section.settings.headline != blank %}
+    <div class="l2l-centered-image-headline">
+      <h2>{{ section.settings.headline }}</h2>
+    </div>
+  {% endif %}
+
+  <div class="l2l-centered-image-wrapper">
+    {% if section.settings.image %}
+      {% if section.settings.link_url != blank %}
+        <a href="{{ section.settings.link_url }}">
+      {% endif %}
+
+      <img
+        src="{{ section.settings.image | image_url: width: 1920 }}"
+        alt="{{ section.settings.image.alt | default: section.settings.headline | escape }}"
+        loading="{{ section.settings.lazy_load }}"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+        {% if section.settings.add_shadow %}class="image-shadow"{% endif %}
+      >
+
+      {% if section.settings.link_url != blank %}
+        </a>
+      {% endif %}
+    {% else %}
+      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {% endif %}
+  </div>
+
+  {% if section.settings.caption != blank %}
+    <div class="l2l-centered-image-caption">
+      {{ section.settings.caption }}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "L2L Centered Image",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline (Optional)",
+      "info": "Leave blank to hide headline"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption (Optional)",
+      "info": "Text displayed below the image"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL (Optional)",
+      "info": "Make the image clickable"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Section Maximum Width",
+      "min": 600,
+      "max": 1600,
+      "step": 100,
+      "default": 1200,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "image_max_width",
+      "label": "Image Maximum Width",
+      "min": 300,
+      "max": 1400,
+      "step": 50,
+      "default": 800,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Headline Style"
+    },
+    {
+      "type": "range",
+      "id": "headline_size",
+      "label": "Headline Size",
+      "min": 1.5,
+      "max": 4,
+      "step": 0.25,
+      "default": 2.5,
+      "unit": "rem"
+    },
+    {
+      "type": "select",
+      "id": "headline_weight",
+      "label": "Headline Weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "headline_spacing",
+      "label": "Space Below Headline",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "default": 30,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Caption Style"
+    },
+    {
+      "type": "range",
+      "id": "caption_size",
+      "label": "Caption Size",
+      "min": 0.8,
+      "max": 1.5,
+      "step": 0.1,
+      "default": 1,
+      "unit": "rem"
+    },
+    {
+      "type": "select",
+      "id": "caption_style",
+      "label": "Caption Style",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "italic",
+          "label": "Italic"
+        }
+      ],
+      "default": "italic"
+    },
+    {
+      "type": "header",
+      "content": "Image Style"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image Corner Radius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "default": 8,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "add_shadow",
+      "label": "Add Shadow to Image",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "lazy_load",
+      "label": "Image Loading",
+      "options": [
+        {
+          "value": "eager",
+          "label": "Eager (Load immediately)"
+        },
+        {
+          "value": "lazy",
+          "label": "Lazy (Load when visible)"
+        }
+      ],
+      "default": "lazy"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "headline_color",
+      "label": "Headline Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "caption_color",
+      "label": "Caption Color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "L2L Centered Image"
+    }
+  ]
+}
+{% endschema %}

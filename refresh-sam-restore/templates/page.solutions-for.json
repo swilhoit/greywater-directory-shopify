@@ -1,0 +1,591 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_yfHtE4": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_n8Kiaj": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Greywater System for Tiny Home Living</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_3WkhTn": {
+          "type": "text",
+          "settings": {
+            "text": "Tiny homes need to save water. Waterwise Group’s greywater systems help you use less, protect nature, and follow the rules—all while living a green life.",
+            "text_style": "body"
+          }
+        },
+        "buttons_A4ekBf": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Buy Aqua2Use GWDD",
+            "button_link_1": "shopify://products/aqua2use-gwdd",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_n8Kiaj",
+        "text_3WkhTn",
+        "buttons_A4ekBf"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/clay-banks-g4oQpCaX6lw-unsplash.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_TxYqmd": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_DeKwNM": {
+          "type": "caption",
+          "settings": {
+            "caption": "Live Small. Save Big. Go Green.",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_q3je6P": {
+          "type": "heading",
+          "settings": {
+            "header_type": "h2",
+            "heading": "<strong>Tiny Home Water Recycling Made Easy</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_PPUaif": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Living off the grid means every drop counts. Untreated greywater from your shower, sinks, and washing machine is wasted potential. Without a proper system, you lose water that could be used to support your garden, conserve resources, and reduce your environmental footprint.</p><p></p>"
+          }
+        },
+        "text_mA7pLi": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Imagine turning every drop of your shower and laundry into a lush garden that cuts your bills and fuels your off-grid life.</strong></p>"
+          }
+        },
+        "text_4pBV76": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our compact, fully automated Aqua2Use system installs with just six simple plumbing connections. </p><p>Join the community of forward-thinking off-grid residents who are turning greywater into green savings with the Aqua2use Greywater System for Tiny Home Living.</p>"
+          }
+        },
+        "button_ERUWGh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Aqua2Use GWDD",
+            "button_link": "shopify://products/aqua2use-gwdd",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_DeKwNM",
+        "heading_q3je6P",
+        "text_PPUaif",
+        "text_mA7pLi",
+        "text_4pBV76",
+        "button_ERUWGh"
+      ],
+      "custom_css": [
+        ".gradient {margin-top: calc(var(--spacing-sections-mobile) * -1);}",
+        "@media screen and (min-width: 750px) {.gradient {margin-top: calc(var(--spacing-sections-desktop) * -1); }}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_8rzaFB": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_b7tCTz": {
+          "type": "caption",
+          "settings": {
+            "caption": "maximizes every drop",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_wHXHGb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Aqua2Use is Perfect for Tiny Homes",
+            "heading_size": "h1"
+          }
+        },
+        "text_YWx3ng": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tiny homes need to save water. Waterwise Group’s greywater systems help you use less, protect nature, and follow the rules—all while living a green life.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_pxa4d8": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Aqua2Use GWDD",
+            "button_link": "shopify://products/aqua2use-gwdd",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_b7tCTz",
+        "heading_wHXHGb",
+        "text_YWx3ng",
+        "button_pxa4d8"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/jed-owen-BpT50qq5ySw-unsplash.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_m8Ai3h": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_pg7PT3": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "image": "shopify://shop_images/icon-save-money.png",
+            "title": "<strong>Save Money Instantly</strong>",
+            "text": "<p>Cut your water bill by 40% and enjoy lower monthly bills with a smart, efficient greywater system.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_KxH9H4": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "image": "shopify://shop_images/icon-save-water.png",
+            "title": "<strong>Conserve Up to 40,000 Gallons</strong>",
+            "text": "<p>Reuse non-sewage waste water to significantly reduce water consumption and safeguard precious water supplies.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WbdtzM": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "image": "shopify://shop_images/icon-save-yard.png",
+            "title": "<strong>Go Green & Sustain</strong>",
+            "text": "<p>Recycle your grey water to create a sustainable lifestyle—helping the environment while reducing your reliance on city water.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_pg7PT3",
+        "column_KxH9H4",
+        "column_WbdtzM"
+      ],
+      "settings": {
+        "title": "Why Aqua2Use is Perfect for Tiny Homes",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collage_D6qjgX": {
+      "type": "collage",
+      "blocks": {
+        "image_6yh6F6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/andrea-davis-JJaij2iMdvU-unsplash.jpg"
+          }
+        },
+        "product_qdByhh": {
+          "type": "product",
+          "settings": {
+            "product": "aqua2use-gwdd",
+            "second_image": false
+          }
+        },
+        "collection_jw9B3d": {
+          "type": "collection",
+          "settings": {
+            "collection": "all"
+          }
+        }
+      },
+      "block_order": [
+        "image_6yh6F6",
+        "product_qdByhh",
+        "collection_jw9B3d"
+      ],
+      "settings": {
+        "heading": "<strong>Tiny Home Greywater System</strong>",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_DJG6MH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_BJPYmC": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Step 1: Collect</strong>",
+            "text": "<p>The Aqua2use diverts water from the laundry, wash basins, bath and shower.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gRhDec": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Step 2: Filter</strong>",
+            "text": "<p>Aqua2use state of the art, long lasting filter mats offer the best filtration available for greywater.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GHdk6g": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Step 3: Flourish</strong>",
+            "text": "<p>The filtered water is immediately and automatically pumped via subsurface dripper irrigation to your plants keeping them healthy and green.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_BJPYmC",
+        "column_gRhDec",
+        "column_GHdk6g"
+      ],
+      "settings": {
+        "title": "<strong>How Aqua2use Works!</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_VPBzXy": {
+      "type": "multirow",
+      "blocks": {
+        "row_X7r6cA": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/aaron-burden-dXYE1d08BiY-unsplash.jpg",
+            "caption": "Contribute to a Sustainable Future",
+            "heading": "<strong>Help the Planet by Reducing Waste</strong>",
+            "text": "<p>Reusing water means <strong>less goes down the drain</strong> and <strong>less pollution</strong> in our rivers and oceans.</p>",
+            "button_label": "Buy Aqua2Use GWDD",
+            "button_link": "shopify://products/aqua2use-gwdd"
+          }
+        },
+        "row_84jhiy": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/clay-banks-g4oQpCaX6lw-unsplash.jpg",
+            "caption": "Hassle-Free Installation",
+            "heading": "<strong>Easy Setup, Quick Results</strong>",
+            "text": "<p>Your greywater systems will be installed in 2-4 hours—so you’ll start saving water and money fast!</p>",
+            "button_label": "Buy Aqua2Use GWDD",
+            "button_link": "shopify://products/aqua2use-gwdd"
+          }
+        },
+        "row_VABQYB": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/andrea-davis-IWfe63thJxk-unsplash.jpg",
+            "caption": "Compact Powerhouse",
+            "heading": "<strong>Save Space While Delivering Maximum Efficiency</strong>",
+            "text": "<p>Designed specifically for limited spaces, the Aqua2use measures just 24″ in length, 15″ in width, and 20″ in height, making it an ideal fit for tiny homes.</p>",
+            "button_label": "Buy Aqua2Use GWDD",
+            "button_link": "shopify://products/aqua2use-gwdd"
+          }
+        },
+        "row_XqnMT6": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/david-becker-rrfdqjJWwmU-unsplash.jpg",
+            "caption": "Affordable",
+            "heading": "<strong>Recycle 40,000+ Gallons a Year!</strong>",
+            "text": "<p>A family of four can reuse over 40,000 gallons of water each year. That means less waste and more savings!</p>",
+            "button_label": "Buy Aqua2Use GWDD",
+            "button_link": "shopify://products/aqua2use-gwdd"
+          }
+        }
+      },
+      "block_order": [
+        "row_X7r6cA",
+        "row_84jhiy",
+        "row_VABQYB",
+        "row_XqnMT6"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_3zi6DA": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_TAzL3H": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Danger to Aquatic Life</strong>",
+            "text": "<p>Dirty greywater can carry chemicals and dirt into rivers, lakes, and ponds. This can harm fish, frogs, and other water animals by polluting their homes.</p><p></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8HfQ37": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Harm to Land Animals</strong>",
+            "text": "<p>Polluted greywater can soak into the ground and mix with water sources. This can make the environment unsafe for ducks, geese, and other animals that need clean water to survive.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9RKcTj": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Risk to Nature’s Balance</strong>",
+            "text": "<p>If greywater isn’t treated properly, harmful substances can build up and hurt the environment. This can put bees, butterflies, and other important creatures in danger, making it harder for nature to stay healthy.</p><p></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_TAzL3H",
+        "column_8HfQ37",
+        "column_9RKcTj"
+      ],
+      "settings": {
+        "title": "<strong>Manage Your Impact on Nature!</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_contact_form_QaVwFX": {
+      "type": "rich-text-contact-form",
+      "blocks": {
+        "heading_hTixbQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Stop wasting water and start living sustainably!</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_hmp4Hg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Join the eco-savvy tiny home movement with Aqua2Use and turn your greywater into green savings. Contact us today for a free consultation and take the first step toward a smarter, greener home.</p>"
+          }
+        },
+        "button_a9TyUd": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hTixbQ",
+        "text_hmp4Hg",
+        "button_a9TyUd"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "contact_heading": "Get in Touch"
+      }
+    },
+    "collapsible_content_tmGrrr": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_bpjMdD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the Aqua2use?",
+            "icon": "none",
+            "row_content": "<p>The Aqua2use is the most advanced Grey Water Diversion Device on the market. It is designed to help you easily reuse your waste water from your laundry, bath and shower.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tfhfiK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is it safe to use the Aqua2use to irrigate my garden?",
+            "icon": "none",
+            "row_content": "<p>It is absolutely safe to use greywater to water your plants and your trees. Your system needs to be connected to a drip irrigation system, and you should use low phosphate detergent . The filtering system of the Aqua2use is the best on the market, and will intercept lint and other impurities.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ctJgmc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the warranty?",
+            "icon": "none",
+            "row_content": "<p>All parts and the pump are covered by a 12 month replacement warranty.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PCXGpG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How often do I have to replace or clean the filters?",
+            "icon": "none",
+            "row_content": "<p>The filters are designed to be cleaned over and over so you don’ need to replace them.<br/></p><p>Testing in the field has shown that up to 15,000 gallons can pass through the unit before they need cleaning. The recommended cleaning cycle is from 4-6 months, depending on how many people are using the system. Dispose of waste thoughtfully and wear protective gloves when cleaning.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bpjMdD",
+        "collapsible_row_tfhfiK",
+        "collapsible_row_ctJgmc",
+        "collapsible_row_PCXGpG"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "scheme-3",
+        "container_color_scheme": "scheme-5",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_yfHtE4",
+    "rich_text_TxYqmd",
+    "image_with_text_8rzaFB",
+    "multicolumn_m8Ai3h",
+    "collage_D6qjgX",
+    "multicolumn_DJG6MH",
+    "multirow_VPBzXy",
+    "multicolumn_3zi6DA",
+    "rich_text_contact_form_QaVwFX",
+    "collapsible_content_tmGrrr"
+  ]
+}

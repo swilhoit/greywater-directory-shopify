@@ -1,0 +1,245 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_MxJweJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HndwJ7": {
+          "type": "heading",
+          "settings": {
+            "header_type": "h1",
+            "heading": "<strong>How One California Homeowner Uses Aqua2use to Save Water—and His Trees</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_birCNE": {
+          "type": "text",
+          "settings": {
+            "text": "<h4><em><strong>“If you’re even a little handy and care about saving water, Aqua2use is an affordable way to make a big impact.” - Jay,  Customer</strong></em></h4>"
+          }
+        },
+        "button_LPCcki": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HndwJ7",
+        "text_birCNE",
+        "button_LPCcki"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_QFBicW": {
+      "type": "multirow",
+      "blocks": {
+        "row_JFk6iJ": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/PXL_20231007_202526228-EDIT.jpg",
+            "caption": "",
+            "heading": "<strong>The Challenge</strong>",
+            "text": "<p>Jay lives in California, where drought is always just around the corner. To protect his landscape—especially his 60-year-old redwoods and camellias—he started looking for a smart way to reuse water at home.</p><p>That’s when he found <strong>Aqua2use</strong>.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_iaiLrE": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/PXL_20220831_203654618.jpg",
+            "caption": "",
+            "heading": "<strong>The Setup</strong>",
+            "text": "<p>Jay had a plumber install a two-way valve that redirects greywater (from the <strong>washing machine, sinks, tub, and shower</strong>) to either the <strong>Aqua2use system or the town sewer</strong>. Now, with a simple bathroom switch, he and his family can choose where the water goes.</p><p><em><strong>“If we’re washing something gross or using bleach, we send it to the sewer. Otherwise, it goes to our trees—about 90% of the time.”</strong></em></p><p>He also added an <strong>indexing valve</strong>, which sends the filtered greywater to different trees around the yard. It helps spread out the water so everything gets what it needs.</p><p><em><strong>“If it [the drought] ever gets really bad, at least our trees will survive. We can replant flowers. We can’t replace those redwoods.”</strong></em></p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_qXFX9Y": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/PXL_20220131_233235133.jpg",
+            "caption": "",
+            "heading": "<strong>Easy Maintenance</strong>",
+            "text": "<p>Jay says maintenance is simple and only needed every few months. The key? Something called a <strong>biofilm</strong>—a natural layer that builds up inside the system and helps break down soaps, oils, and other stuff in the greywater.</p><p><em><strong>“You just open the system every 3-4 months and scrape off any extra build-up. It takes 10–15 minutes. </strong></em></p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_9nfBCa": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/PXL_20211117_000207812.jpg",
+            "caption": "",
+            "heading": "<strong>The Bigger Picture</strong>",
+            "text": "<p>For Jay, Aqua2use is more than just a water system—it’s part of a bigger mindset. He credits groups like <a href=\"https://www.greywatercorps.com/\" target=\"_blank\" title=\"https://www.greywatercorps.com/\"><strong>Greywater Corps</strong></a> for showing how powerful simple changes can be, and he believes Water Wise Group has the chance to inspire more people to save water—for both themselves and the planet.</p><p><em><strong>“This works best when people understand the system and get a little help setting it up. But once it’s going, it really works.”</strong></em></p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_JFk6iJ",
+        "row_iaiLrE",
+        "row_qXFX9Y",
+        "row_9nfBCa"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_UrgQJT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_eHreFn": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Saving Water Like Jay</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_9wkxXc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Protect your landscape, lower your water bill, and make every drop count. Jay’s Aqua2use setup cost under $1,000—and now he’s reusing 90% of his household greywater to keep his trees thriving.</p><p><strong>Shop Aqua2use today and take control of your water use.</strong><br/><br/>Don’t wait for the next drought. Be ready. Be Water Wise.</p><p></p>",
+            "text_style": "body"
+          }
+        },
+        "button_tAET4M": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now",
+            "button_link": "shopify://products/aqua2use-gwdd",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_eHreFn",
+        "text_9wkxXc",
+        "button_tAET4M"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/PXL_20220122_161536977.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_fAU8cx": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Learn More About Saving Water!",
+        "heading_size": "h1",
+        "blog": "greywater-education",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "contact_form_YG3QmJ": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_DRWCKD": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Gretwater Systems",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "rich_text_MxJweJ",
+    "main",
+    "multirow_QFBicW",
+    "image_with_text_UrgQJT",
+    "featured_blog_fAU8cx",
+    "contact_form_YG3QmJ",
+    "featured_collection_DRWCKD"
+  ]
+}

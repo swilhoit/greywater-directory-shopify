@@ -1,0 +1,54 @@
+{{ 'jump-link.css' | asset_url | stylesheet_tag }}
+
+
+<div class="jump-link page-width">
+  <ul class="jump-link__items">
+    {%- for block in section.blocks -%}
+      <li class="jump-link__item">
+        <a href="{{ block.settings.link_url }}" class="jump-link__url button button--primary">{{ block.settings.link_label }}</a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+
+{% schema %}
+{
+  "name": "Jump Links",
+  "tag": "section",
+  "class": "cmp-jump-link",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Jump Link"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Link",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Link Label",
+          "id": "link_label"
+        },
+        {
+          "type": "text",
+          "label": "Link URL",
+          "id": "link_url",
+          "info": "Ensure the link points to a unique ID and starts with #"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Jump Links"
+    }
+  ]
+}
+{% endschema %}

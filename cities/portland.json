@@ -1,0 +1,51 @@
+{
+  "city_name": "Portland",
+  "state": "Oregon",
+  "hero_subheading": "Sustainable Portland living - complement our rainy seasons with year-round greywater irrigation",
+  "water_district": "Portland Water Bureau",
+  "permit_required": true,
+  "permit_info": "Simple permit process for Tier 1 laundry systems",
+  "local_codes": "Oregon Plumbing Specialty Code",
+  "rebate_program": "Portland Water Conservation Incentives",
+  "rebate_amount": "$350",
+  "rebate_url": "https://www.portland.gov/water/conservation",
+  "annual_water_savings": "12,000",
+  "annual_cost_savings": "$380",
+  "water_savings_percent": "35",
+  "drought_days": "60",
+  "water_cost_per_gallon": "0.032",
+  "average_rainfall": "43 inches",
+  "climate_zone": "Temperate Oceanic",
+  "installers": [
+    {
+      "name": "PDX Greywater Co",
+      "phone": "(503) 555-0001",
+      "website": "example.com",
+      "certified": true
+    },
+    {
+      "name": "Cascade Water Solutions",
+      "phone": "(503) 555-0002",
+      "certified": true
+    }
+  ],
+  "resources": [
+    {
+      "title": "Portland Greywater Guide",
+      "url": "#",
+      "type": "guide"
+    },
+    {
+      "title": "Oregon DEQ Greywater Rules",
+      "url": "#",
+      "type": "regulations"
+    }
+  ],
+  "local_tips": [
+    "Best for summer irrigation when rainfall is low",
+    "Divert to sewer during wet winter months",
+    "Great for vegetable gardens (root vegetables excluded)",
+    "Use biocompatible soaps for soil health",
+    "Consider rain garden integration"
+  ]
+}

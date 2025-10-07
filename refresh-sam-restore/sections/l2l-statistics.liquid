@@ -1,0 +1,386 @@
+<style>
+  .l2l-stats-section {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.background_gradient }};
+  }
+
+  .l2l-stats-container {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .l2l-stats-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .l2l-stats-header h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: {{ section.settings.heading_color }};
+    margin-bottom: 1rem;
+  }
+
+  .l2l-stats-header p {
+    font-size: 1.1rem;
+    color: {{ section.settings.subheading_color }};
+  }
+
+  .l2l-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .l2l-stats-grid {
+      grid-template-columns: repeat({{ section.settings.columns }}, 1fr);
+    }
+  }
+
+  .l2l-stat-card {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: {{ section.settings.card_background }};
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .l2l-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .l2l-stat-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .l2l-stat-number {
+    font-size: {{ section.settings.number_size }}rem;
+    font-weight: bold;
+    color: {{ section.settings.number_color }};
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+
+  .l2l-stat-suffix {
+    font-size: 1.5rem;
+    color: {{ section.settings.suffix_color }};
+    margin-left: 0.25rem;
+  }
+
+  .l2l-stat-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: {{ section.settings.label_color }};
+    margin-bottom: 0.5rem;
+  }
+
+  .l2l-stat-description {
+    font-size: 0.95rem;
+    color: {{ section.settings.description_color }};
+    line-height: 1.5;
+  }
+
+  @keyframes countUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .l2l-stat-card[data-animated="true"] {
+    animation: countUp 0.6s ease-out;
+  }
+</style>
+
+<div class="l2l-stats-section">
+  <div class="l2l-stats-container">
+    {% if section.settings.heading != blank or section.settings.subheading != blank %}
+      <div class="l2l-stats-header">
+        {% if section.settings.heading != blank %}
+          <h2>{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.subheading != blank %}
+          <p>{{ section.settings.subheading }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="l2l-stats-grid">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'statistic' %}
+            <div class="l2l-stat-card" data-number="{{ block.settings.number }}" {{ block.shopify_attributes }}>
+              {% if block.settings.icon != blank %}
+                <span class="l2l-stat-icon">{{ block.settings.icon }}</span>
+              {% endif %}
+              <div class="l2l-stat-number">
+                <span class="stat-counter">{{ block.settings.number }}</span>
+                {% if block.settings.suffix != blank %}
+                  <span class="l2l-stat-suffix">{{ block.settings.suffix }}</span>
+                {% endif %}
+              </div>
+              {% if block.settings.label != blank %}
+                <div class="l2l-stat-label">{{ block.settings.label }}</div>
+              {% endif %}
+              {% if block.settings.description != blank %}
+                <div class="l2l-stat-description">{{ block.settings.description }}</div>
+              {% endif %}
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+          entry.target.dataset.animated = 'true';
+
+          const counter = entry.target.querySelector('.stat-counter');
+          const target = parseInt(entry.target.dataset.number);
+          const duration = 2000;
+          const increment = target / (duration / 16);
+          let current = 0;
+
+          const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+              counter.textContent = Math.floor(current).toLocaleString();
+              requestAnimationFrame(updateCounter);
+            } else {
+              counter.textContent = target.toLocaleString();
+            }
+          };
+
+          updateCounter();
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.l2l-stat-card').forEach(card => {
+      observer.observe(card);
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "L2L Statistics",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The Impact of Greywater Recycling"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Real numbers that show the difference you can make"
+    },
+    {
+      "type": "select",
+      "id": "columns",
+      "label": "Columns (Desktop)",
+      "options": [
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        }
+      ],
+      "default": "4"
+    },
+    {
+      "type": "range",
+      "id": "number_size",
+      "label": "Number Size",
+      "min": 2,
+      "max": 5,
+      "step": 0.5,
+      "default": 3,
+      "unit": "rem"
+    },
+    {
+      "type": "text",
+      "id": "background_gradient",
+      "label": "Background",
+      "default": "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "number_color",
+      "label": "Number Color",
+      "default": "#4a90e2"
+    },
+    {
+      "type": "color",
+      "id": "suffix_color",
+      "label": "Suffix Color",
+      "default": "#4a90e2"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description Color",
+      "default": "#777777"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "statistic",
+      "name": "Statistic",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (Emoji)",
+          "default": "💧"
+        },
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number",
+          "default": "10000"
+        },
+        {
+          "type": "text",
+          "id": "suffix",
+          "label": "Suffix",
+          "default": "+",
+          "info": "Text after number (e.g., +, %, gal)"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Gallons Saved Yearly"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Per household with L2L system"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "L2L Statistics",
+      "blocks": [
+        {
+          "type": "statistic",
+          "settings": {
+            "icon": "💧",
+            "number": "10000",
+            "suffix": "+",
+            "label": "Gallons Saved",
+            "description": "Per household yearly"
+          }
+        },
+        {
+          "type": "statistic",
+          "settings": {
+            "icon": "💰",
+            "number": "300",
+            "suffix": "$",
+            "label": "Annual Savings",
+            "description": "On water bills"
+          }
+        },
+        {
+          "type": "statistic",
+          "settings": {
+            "icon": "🌱",
+            "number": "40",
+            "suffix": "%",
+            "label": "Water Reduction",
+            "description": "In outdoor irrigation"
+          }
+        },
+        {
+          "type": "statistic",
+          "settings": {
+            "icon": "⏱️",
+            "number": "2",
+            "suffix": "days",
+            "label": "Installation Time",
+            "description": "DIY weekend project"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

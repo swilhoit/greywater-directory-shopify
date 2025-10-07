@@ -1,0 +1,230 @@
+{% comment %}
+  CTA Section for L2L Pages - Individual Metafields Version
+  Uses individual metafields instead of JSON object
+{% endcomment %}
+
+{% liquid
+  # Get individual CTA metafields
+  assign cta_heading = page.metafields.l2l_individual.cta_heading
+  assign cta_text = page.metafields.l2l_individual.cta_text
+  assign cta_button_text = page.metafields.l2l_individual.cta_button_text
+  assign cta_button_url = page.metafields.l2l_individual.cta_button_url
+
+  # Check if we have metafield data
+  assign has_metafield_cta = false
+  if cta_heading != blank or cta_text != blank
+    assign has_metafield_cta = true
+  endif
+
+  # Use metafields if available, otherwise section settings
+  if has_metafield_cta
+    assign heading = cta_heading
+    assign text = cta_text
+    assign button_text = cta_button_text | default: section.settings.button_text
+    assign button_url = cta_button_url | default: section.settings.button_url
+  else
+    assign heading = section.settings.heading
+    assign text = section.settings.text
+    assign button_text = section.settings.button_text
+    assign button_url = section.settings.button_url
+  endif
+%}
+
+<section class="l2l-cta section-{{ section.id }}-padding">
+  <div class="container">
+    <div class="l2l-cta__content">
+      {% if heading != blank %}
+        <h2 class="l2l-cta__heading h2">
+          {{ heading }}
+        </h2>
+      {% endif %}
+
+      {% if text != blank %}
+        <p class="l2l-cta__text">
+          {{ text | newline_to_br }}
+        </p>
+      {% endif %}
+
+      {% if button_text != blank %}
+        <a
+          href="{{ button_url | default: '#' }}"
+          class="l2l-cta__button button button--primary"
+        >
+          {{ button_text }}
+        </a>
+      {% endif %}
+    </div>
+
+    {% if section.settings.image %}
+      <div class="l2l-cta__image">
+        {{ section.settings.image | image_url: width: 600 | image_tag: class: 'l2l-cta__img', loading: 'lazy' }}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "L2L CTA (Individual)",
+  "tag": "section",
+  "class": "l2l-cta-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Ready to Start Saving Water?"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Join thousands of homeowners who are reducing their water bills and helping the environment with L2L systems."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Get Started Today"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        { "value": "text_only", "label": "Text only" },
+        { "value": "text_image", "label": "Text with image" }
+      ],
+      "default": "text_only"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#27ae60"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "L2L CTA (Individual)"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .l2l-cta {
+    background: {{ section.settings.background_color | default: '#27ae60' }};
+    color: {{ section.settings.text_color | default: '#ffffff' }};
+  }
+
+  .l2l-cta .container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .l2l-cta__content {
+    flex: 1;
+    text-align: center;
+  }
+
+  .l2l-cta__heading {
+    margin-bottom: 1.5rem;
+    color: inherit;
+  }
+
+  .l2l-cta__text {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+
+  .l2l-cta__button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: inherit;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid currentColor;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  .l2l-cta__button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .l2l-cta__image {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  .l2l-cta__img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  {% if section.settings.layout == 'text_only' %}
+    .l2l-cta__image {
+      display: none;
+    }
+  {% endif %}
+
+  @media (max-width: 768px) {
+    .l2l-cta .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .l2l-cta__image {
+      order: -1;
+      max-width: 100%;
+    }
+  }
+</style>

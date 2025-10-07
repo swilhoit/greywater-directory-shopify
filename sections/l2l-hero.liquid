@@ -1,0 +1,423 @@
+<style>
+  .l2l-hero-section {
+    padding: 60px 0;
+    background: {{ section.settings.hero_gradient | default: 'linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%)' }};
+  }
+
+  .l2l-hero-container {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .l2l-hero-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack vertically by default */
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .l2l-hero-content {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .l2l-hero-content h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: {{ section.settings.heading_color | default: '#1a1a1a' }};
+  }
+
+  .l2l-hero-content p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    margin-bottom: 2rem;
+    color: {{ section.settings.text_color | default: '#666666' }};
+    line-height: 1.6;
+  }
+
+  .l2l-hero-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: {{ section.settings.button_bg | default: '#000000' }};
+    color: {{ section.settings.button_text_color | default: '#ffffff' }};
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+  }
+
+  .l2l-hero-button:hover {
+    transform: translateY(-2px);
+  }
+
+  .l2l-hero-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+  }
+
+  .l2l-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: contain; /* Changed from cover to contain to prevent squishing */
+    max-height: 500px;
+  }
+
+  .l2l-hero-image-placeholder {
+    width: 100%;
+    aspect-ratio: 3/2;
+    background: #f0f0f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 1.2rem;
+  }
+
+  /* Rebate Notice Box */
+  .l2l-rebate-notice {
+    display: inline-block;
+    margin: 2rem 0 0;
+    padding: 1.25rem 1.75rem;
+    background-color: {{ section.settings.notice_bg_color | default: '#FFF3CD' }};
+    border-left: 4px solid {{ section.settings.notice_border_color | default: '#FFC107' }};
+    border-radius: 8px;
+    text-align: left;
+  }
+
+  .l2l-rebate-notice-headline {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: {{ section.settings.notice_headline_color | default: '#6c5300' }};
+  }
+
+  .l2l-rebate-notice-icon {
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
+  }
+
+  .l2l-rebate-notice-text {
+    color: {{ section.settings.notice_text_color | default: '#856404' }};
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .l2l-rebate-notice-link {
+    color: {{ section.settings.notice_link_color | default: '#856404' }};
+    text-decoration: underline;
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+
+  .l2l-rebate-notice-link:hover {
+    opacity: 0.8;
+  }
+
+  /* Side by side layout - override default stacked */
+  .l2l-hero-wrapper.layout-side-by-side {
+    flex-direction: row;
+    gap: 4rem;
+  }
+
+  .l2l-hero-wrapper.layout-side-by-side .l2l-hero-content {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+  }
+
+  .l2l-hero-wrapper.layout-side-by-side .l2l-hero-image {
+    flex: 1;
+    max-width: 600px;
+  }
+
+  /* Image position variations */
+  .l2l-hero-wrapper.image-right {
+    flex-direction: row-reverse;
+  }
+
+  /* Mobile Responsive */
+  @media screen and (max-width: 768px) {
+    .l2l-hero-wrapper {
+      flex-direction: column !important;
+      gap: 2rem;
+    }
+
+    .l2l-hero-content {
+      text-align: center;
+      order: 1; /* Ensure content shows first */
+    }
+
+    .l2l-hero-image {
+      width: 100%;
+      max-width: 100%;
+      order: 2; /* Image shows second on mobile */
+    }
+
+    .l2l-hero-container {
+      padding: 0 1rem;
+    }
+
+    .l2l-hero-section {
+      padding: 40px 0;
+    }
+
+    .l2l-rebate-notice {
+      margin-top: 1.5rem;
+      padding: 1rem 1.25rem;
+    }
+
+    .l2l-rebate-notice-headline {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<div class="l2l-hero-section">
+  <div class="l2l-hero-container">
+    <div class="l2l-hero-wrapper layout-{{ section.settings.layout }} {% if section.settings.image_position == 'right' %}image-right{% endif %}">
+      <div class="l2l-hero-content">
+        <h1>{{ section.settings.hero_title | default: 'Add Your Title' }}</h1>
+        <p>{{ section.settings.hero_subtitle | default: 'Add your subtitle text here' }}</p>
+        {% if section.settings.hero_button_text != blank %}
+          <a href="{{ section.settings.hero_button_link }}" class="l2l-hero-button">
+            {{ section.settings.hero_button_text }}
+          </a>
+        {% endif %}
+
+        {% if section.settings.show_rebate_notice %}
+          <div style="display: block; width: 100%;">
+            <div class="l2l-rebate-notice">
+              <div class="l2l-rebate-notice-headline">
+                <span class="l2l-rebate-notice-icon">{{ section.settings.notice_icon | default: '💰' }}</span>
+                <span>{{ section.settings.notice_headline | default: 'Rebate Alert!' }}</span>
+              </div>
+              <p class="l2l-rebate-notice-text">
+                {{ section.settings.notice_text | default: 'Rebates may be available in your city!' }}
+                {% if section.settings.notice_link_url != blank %}
+                  <a href="{{ section.settings.notice_link_url }}" class="l2l-rebate-notice-link" {% if section.settings.notice_link_new_tab %}target="_blank" rel="noopener"{% endif %}>
+                    {{ section.settings.notice_link_text | default: 'Check availability' }}
+                  </a>
+                {% endif %}
+              </p>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="l2l-hero-image">
+        {% if section.settings.hero_image %}
+          {{ section.settings.hero_image | image_url: width: 1200 | image_tag:
+            loading: 'eager',
+            widths: '375, 550, 750, 1100, 1200',
+            sizes: '(min-width: 769px) 50vw, 100vw'
+          }}
+        {% else %}
+          <div class="l2l-hero-image-placeholder">
+            <span>Select an Image</span>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "L2L Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Title",
+      "default": "Laundry to Landscape Systems"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_subtitle",
+      "label": "Subtitle",
+      "default": "Save water and money with a simple greywater recycling system"
+    },
+    {
+      "type": "text",
+      "id": "hero_button_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "hero_button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout Style",
+      "options": [
+        {
+          "value": "centered",
+          "label": "Centered (Stacked)"
+        },
+        {
+          "value": "side-by-side",
+          "label": "Side by Side"
+        }
+      ],
+      "default": "centered"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Position (Side by Side only)",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "text",
+      "id": "hero_gradient",
+      "label": "Background Gradient",
+      "default": "linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%)"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Rebate Notice"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rebate_notice",
+      "label": "Show Rebate Notice",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "notice_icon",
+      "label": "Notice Icon (Emoji)",
+      "default": "💰"
+    },
+    {
+      "type": "text",
+      "id": "notice_headline",
+      "label": "Notice Headline",
+      "default": "Rebate Alert!"
+    },
+    {
+      "type": "text",
+      "id": "notice_text",
+      "label": "Notice Text",
+      "default": "Rebates may be available in your city!"
+    },
+    {
+      "type": "text",
+      "id": "notice_link_text",
+      "label": "Link Text",
+      "default": "Check availability"
+    },
+    {
+      "type": "url",
+      "id": "notice_link_url",
+      "label": "Link URL",
+      "info": "URL for rebate information"
+    },
+    {
+      "type": "checkbox",
+      "id": "notice_link_new_tab",
+      "label": "Open link in new tab",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "notice_bg_color",
+      "label": "Notice Background Color",
+      "default": "#FFF3CD"
+    },
+    {
+      "type": "color",
+      "id": "notice_border_color",
+      "label": "Notice Border Color",
+      "default": "#FFC107"
+    },
+    {
+      "type": "color",
+      "id": "notice_headline_color",
+      "label": "Notice Headline Color",
+      "default": "#6c5300"
+    },
+    {
+      "type": "color",
+      "id": "notice_text_color",
+      "label": "Notice Text Color",
+      "default": "#856404"
+    },
+    {
+      "type": "color",
+      "id": "notice_link_color",
+      "label": "Notice Link Color",
+      "default": "#856404"
+    }
+  ],
+  "presets": [
+    {
+      "name": "L2L Hero"
+    }
+  ]
+}
+{% endschema %}

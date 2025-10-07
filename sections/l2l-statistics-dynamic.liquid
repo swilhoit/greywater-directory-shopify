@@ -1,0 +1,320 @@
+{% comment %}
+  Statistics Section for L2L Pages - Dynamic Version
+  Reads from page metafields or falls back to section blocks
+{% endcomment %}
+
+{% liquid
+  # Get individual statistic metafields
+  assign stat1_value = page.metafields.l2l_individual.stat1_value
+  assign stat1_suffix = page.metafields.l2l_individual.stat1_suffix
+  assign stat1_label = page.metafields.l2l_individual.stat1_label
+  assign stat1_description = page.metafields.l2l_individual.stat1_description
+  assign stat1_icon = page.metafields.l2l_individual.stat1_icon
+
+  assign stat2_value = page.metafields.l2l_individual.stat2_value
+  assign stat2_suffix = page.metafields.l2l_individual.stat2_suffix
+  assign stat2_label = page.metafields.l2l_individual.stat2_label
+  assign stat2_description = page.metafields.l2l_individual.stat2_description
+  assign stat2_icon = page.metafields.l2l_individual.stat2_icon
+
+  assign stat3_value = page.metafields.l2l_individual.stat3_value
+  assign stat3_suffix = page.metafields.l2l_individual.stat3_suffix
+  assign stat3_label = page.metafields.l2l_individual.stat3_label
+  assign stat3_description = page.metafields.l2l_individual.stat3_description
+  assign stat3_icon = page.metafields.l2l_individual.stat3_icon
+
+  assign stat4_value = page.metafields.l2l_individual.stat4_value
+  assign stat4_suffix = page.metafields.l2l_individual.stat4_suffix
+  assign stat4_label = page.metafields.l2l_individual.stat4_label
+  assign stat4_description = page.metafields.l2l_individual.stat4_description
+  assign stat4_icon = page.metafields.l2l_individual.stat4_icon
+
+  # Check if we have metafield data
+  assign has_metafield_stats = false
+  if stat1_value != blank or stat2_value != blank or stat3_value != blank or stat4_value != blank
+    assign has_metafield_stats = true
+  endif
+%}
+
+<section class="l2l-statistics section-{{ section.id }}-padding">
+  <div class="container">
+    {% if section.settings.heading %}
+      <h2 class="l2l-statistics__heading h2 center">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+
+    <div class="l2l-statistics__grid columns-{{ section.settings.columns | default: 4 }}">
+      {% if has_metafield_stats %}
+        {% comment %} Use individual metafield data {% endcomment %}
+
+        {% if stat1_value != blank %}
+          <div class="l2l-statistics__item">
+            {% if stat1_icon != blank %}
+              <div class="l2l-statistics__icon">{{ stat1_icon }}</div>
+            {% endif %}
+            <div class="l2l-statistics__number">
+              {{ stat1_value }}{% if stat1_suffix != blank %}{{ stat1_suffix }}{% endif %}
+            </div>
+            {% if stat1_label != blank %}
+              <div class="l2l-statistics__label">{{ stat1_label }}</div>
+            {% endif %}
+            {% if stat1_description != blank %}
+              <div class="l2l-statistics__description">{{ stat1_description }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if stat2_value != blank %}
+          <div class="l2l-statistics__item">
+            {% if stat2_icon != blank %}
+              <div class="l2l-statistics__icon">{{ stat2_icon }}</div>
+            {% endif %}
+            <div class="l2l-statistics__number">
+              {{ stat2_value }}{% if stat2_suffix != blank %}{{ stat2_suffix }}{% endif %}
+            </div>
+            {% if stat2_label != blank %}
+              <div class="l2l-statistics__label">{{ stat2_label }}</div>
+            {% endif %}
+            {% if stat2_description != blank %}
+              <div class="l2l-statistics__description">{{ stat2_description }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if stat3_value != blank %}
+          <div class="l2l-statistics__item">
+            {% if stat3_icon != blank %}
+              <div class="l2l-statistics__icon">{{ stat3_icon }}</div>
+            {% endif %}
+            <div class="l2l-statistics__number">
+              {{ stat3_value }}{% if stat3_suffix != blank %}{{ stat3_suffix }}{% endif %}
+            </div>
+            {% if stat3_label != blank %}
+              <div class="l2l-statistics__label">{{ stat3_label }}</div>
+            {% endif %}
+            {% if stat3_description != blank %}
+              <div class="l2l-statistics__description">{{ stat3_description }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if stat4_value != blank %}
+          <div class="l2l-statistics__item">
+            {% if stat4_icon != blank %}
+              <div class="l2l-statistics__icon">{{ stat4_icon }}</div>
+            {% endif %}
+            <div class="l2l-statistics__number">
+              {{ stat4_value }}{% if stat4_suffix != blank %}{{ stat4_suffix }}{% endif %}
+            </div>
+            {% if stat4_label != blank %}
+              <div class="l2l-statistics__label">{{ stat4_label }}</div>
+            {% endif %}
+            {% if stat4_description != blank %}
+              <div class="l2l-statistics__description">{{ stat4_description }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+      {% else %}
+        {% comment %} Fall back to section blocks {% endcomment %}
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'statistic' %}
+              <div class="l2l-statistics__item" {{ block.shopify_attributes }}>
+                {% if block.settings.icon %}
+                  <div class="l2l-statistics__icon">{{ block.settings.icon }}</div>
+                {% endif %}
+                <div class="l2l-statistics__number">
+                  {{ block.settings.number }}{% if block.settings.suffix %}{{ block.settings.suffix }}{% endif %}
+                </div>
+                <div class="l2l-statistics__label">{{ block.settings.label }}</div>
+                {% if block.settings.description %}
+                  <div class="l2l-statistics__description">{{ block.settings.description }}</div>
+                {% endif %}
+              </div>
+          {% endcase %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "L2L Statistics (Dynamic)",
+  "tag": "section",
+  "class": "l2l-statistics-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section heading",
+      "default": "The Impact You Can Make"
+    },
+    {
+      "type": "select",
+      "id": "columns",
+      "label": "Columns",
+      "options": [
+        { "value": "2", "label": "2 columns" },
+        { "value": "3", "label": "3 columns" },
+        { "value": "4", "label": "4 columns" }
+      ],
+      "default": "4"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "statistic",
+      "name": "Statistic",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji)",
+          "default": "💧"
+        },
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number",
+          "default": "10000"
+        },
+        {
+          "type": "text",
+          "id": "suffix",
+          "label": "Suffix",
+          "default": "+"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Gallons Saved"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Per household yearly"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "L2L Statistics (Dynamic)",
+      "blocks": [
+        { "type": "statistic" },
+        { "type": "statistic" },
+        { "type": "statistic" },
+        { "type": "statistic" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .l2l-statistics {
+    background: #fff;
+  }
+
+  .l2l-statistics__heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+  }
+
+  .l2l-statistics__grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .l2l-statistics__grid.columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .l2l-statistics__grid.columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .l2l-statistics__grid.columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .l2l-statistics__item {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+
+  .l2l-statistics__item:hover {
+    transform: translateY(-5px);
+  }
+
+  .l2l-statistics__icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .l2l-statistics__number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 0.5rem;
+  }
+
+  .l2l-statistics__label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+
+  .l2l-statistics__description {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  @media (max-width: 768px) {
+    .l2l-statistics__grid.columns-3,
+    .l2l-statistics__grid.columns-4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .l2l-statistics__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

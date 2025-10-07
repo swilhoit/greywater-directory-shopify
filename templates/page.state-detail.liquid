@@ -1,0 +1,373 @@
+{% comment %}
+  Greywater Directory - State detail page template (NEW VERSION)
+  URL: waterwisegroup.com/pages/greywater-directory-[state-name]
+  Created: 2025-01-13 - FIXED VERSION
+{% endcomment %}
+
+<div class="page-width">
+  <div class="breadcrumbs">
+    <a href="/pages/greywater-directory">← Back to Directory</a>
+  </div>
+
+  <div id="state-detail-content">
+    <div class="loading-message">Loading state information...</div>
+  </div>
+</div>
+
+<style>
+  .breadcrumbs {
+    margin-bottom: 30px;
+  }
+
+  .breadcrumbs a {
+    color: rgb(var(--color-link));
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .breadcrumbs a:hover {
+    text-decoration: underline;
+  }
+
+  .state-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .state-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .state-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .state-status {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .state-status.fully-legal {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+
+  .state-status.restricted {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+  }
+
+  .state-status.limited {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+
+  .state-status.prohibited {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+
+  .state-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgb(var(--color-foreground-75));
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+  }
+
+  .info-card {
+    background: rgb(var(--color-background));
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgb(var(--color-border));
+  }
+
+  .info-card h3 {
+    margin-bottom: 15px;
+    color: rgb(var(--color-foreground));
+  }
+
+  .info-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .info-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgb(var(--color-border));
+  }
+
+  .info-card li:last-child {
+    border-bottom: none;
+  }
+
+  .permit-status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .permit-required {
+    background: #fff3cd;
+    color: #856404;
+  }
+
+  .permit-not-required {
+    background: #d4edda;
+    color: #155724;
+  }
+
+  .usage-indicator {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  .usage-allowed {
+    background: #28a745;
+    color: white;
+  }
+
+  .usage-not-allowed {
+    background: #dc3545;
+    color: white;
+  }
+
+  .restrictions-list {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+  }
+
+  .agency-info {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #2196f3;
+  }
+
+  .loading-message {
+    text-align: center;
+    padding: 60px 20px;
+    color: rgb(var(--color-foreground-75));
+    font-size: 1.1rem;
+  }
+
+  .error-message {
+    text-align: center;
+    padding: 60px 20px;
+    color: rgb(var(--color-foreground-75));
+  }
+
+  @media (max-width: 768px) {
+    .state-name {
+      font-size: 2rem;
+    }
+    
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  console.log('✅ NEW TEMPLATE LOADED - state-detail.liquid');
+  
+  async function loadStateDetail() {
+    try {
+      console.log('🚀 Starting state data load...');
+      
+      // Extract state name from page handle
+      const pageHandle = '{{ page.handle }}';
+      console.log('📄 Page handle:', pageHandle);
+      
+      // Convert URL slug back to proper state name
+      const stateSlug = pageHandle.replace('greywater-directory-', '');
+      console.log('🏷️ State slug:', stateSlug);
+      
+      // Convert slug to proper state name (e.g., 'north-carolina' -> 'North Carolina')
+      const stateName = stateSlug.split('-').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join(' ');
+      console.log('🗺️ Converted state name:', stateName);
+      
+      // Load data from theme asset
+      console.log('📡 Fetching data from theme asset...');
+      const response = await fetch('{{ "greywater-state-directory.json" | asset_url }}');
+      console.log('📊 Response status:', response.status);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      console.log('✅ Data loaded successfully');
+      console.log('🏛️ Available states (first 5):', Object.keys(data.states).slice(0, 5));
+      
+      // Find state data
+      let stateInfo = null;
+      let actualStateName = stateName;
+      
+      // Try direct match first
+      if (data.states[stateName]) {
+        stateInfo = data.states[stateName];
+        console.log('✅ Direct match found');
+      }
+      // Try case-insensitive match
+      else {
+        const exactMatch = Object.keys(data.states).find(key => 
+          key.toLowerCase() === stateName.toLowerCase()
+        );
+        if (exactMatch) {
+          stateInfo = data.states[exactMatch];
+          actualStateName = exactMatch;
+          console.log('✅ Case-insensitive match found:', exactMatch);
+        }
+      }
+      
+      if (stateInfo) {
+        console.log('🎯 State info found, rendering...');
+        const state = transformStateData(actualStateName, stateInfo);
+        renderStateDetail(state);
+      } else {
+        console.error('❌ No state info found for:', stateName);
+        console.log('Available states:', Object.keys(data.states));
+        throw new Error(`State "${stateName}" not found in data`);
+      }
+      
+    } catch (error) {
+      console.error('❌ Error loading state detail:', error);
+      document.getElementById('state-detail-content').innerHTML = `
+        <div class="error-message">
+          <h2>State information not found</h2>
+          <p><strong>Debug info:</strong> ${error.message}</p>
+          <p>Sorry, we couldn't load the information for this state. Please try again later.</p>
+          <a href="/pages/greywater-directory" class="btn">Return to Directory</a>
+        </div>
+      `;
+    }
+  }
+
+  function transformStateData(stateName, info) {
+    // Map legal status to our simplified categories
+    let status = "Limited";
+    if (info.legalStatus === "Legal" || info.legalStatus === "Legal and Regulated" || 
+        info.legalStatus === "Regulated and Permitted" || info.legalStatus === "Comprehensive Regulations") {
+      status = "Fully Legal";
+    } else if (info.legalStatus === "Restricted" || info.legalStatus === "Highly Restricted" || 
+               info.legalStatus === "Limited" || info.legalStatus === "Limited/Unclear") {
+      status = "Restricted";
+    } else if (info.legalStatus === "Prohibited" || info.legalStatus === "No formal regulations" || 
+               info.legalStatus === "Effectively Prohibited") {
+      status = "Prohibited";
+    }
+
+    return {
+      state: stateName,
+      status: status,
+      description: info.description || `${info.legalStatus} - ${info.permitRequired} permit required`,
+      details: info.details || info.recentChanges || "See regulatory agency for details",
+      permitRequired: info.permitRequired || "Unknown",
+      indoorUseAllowed: info.indoorUseAllowed || false,
+      outdoorUseAllowed: info.outdoorUseAllowed || false,
+      keyRestrictions: info.keyRestrictions || [],
+      regulatoryAgency: info.primaryAgency,
+      contactInfo: info.contactInfo,
+      website: info.website
+    };
+  }
+
+  function renderStateDetail(state) {
+    const getStatusClass = (status) => status.toLowerCase().replace(/\s+/g, '-');
+    
+    const html = `
+      <div class="state-detail-container">
+        <div class="state-header">
+          <h1 class="state-name">${state.state}</h1>
+          <div class="state-status ${getStatusClass(state.status)}">${state.status}</div>
+          <p class="state-description">${state.description}</p>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Permit Requirements</h3>
+            <p class="permit-status ${state.permitRequired === 'Yes' ? 'permit-required' : 'permit-not-required'}">
+              ${state.permitRequired === 'Yes' ? 'Permit Required' : 'No Permit Required'}
+            </p>
+            <p style="margin-top: 15px;">${state.details}</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Usage Permissions</h3>
+            <ul>
+              <li>
+                <span class="usage-indicator ${state.indoorUseAllowed ? 'usage-allowed' : 'usage-not-allowed'}">
+                  ${state.indoorUseAllowed ? '✓' : '✗'}
+                </span>
+                Indoor Use ${state.indoorUseAllowed ? 'Allowed' : 'Not Allowed'}
+              </li>
+              <li>
+                <span class="usage-indicator ${state.outdoorUseAllowed ? 'usage-allowed' : 'usage-not-allowed'}">
+                  ${state.outdoorUseAllowed ? '✓' : '✗'}
+                </span>
+                Outdoor Use ${state.outdoorUseAllowed ? 'Allowed' : 'Not Allowed'}
+              </li>
+            </ul>
+          </div>
+
+          ${state.keyRestrictions && state.keyRestrictions.length > 0 ? `
+          <div class="info-card">
+            <h3>Key Restrictions</h3>
+            <div class="restrictions-list">
+              <ul>
+                ${state.keyRestrictions.map(restriction => `<li>${restriction}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+          ` : ''}
+
+          ${state.regulatoryAgency ? `
+          <div class="info-card">
+            <h3>Regulatory Information</h3>
+            <div class="agency-info">
+              <p><strong>Agency:</strong> ${state.regulatoryAgency}</p>
+              ${state.contactInfo ? `<p><strong>Contact:</strong> ${state.contactInfo}</p>` : ''}
+              ${state.website ? `<p><strong>Website:</strong> <a href="${state.website}" target="_blank">${state.website}</a></p>` : ''}
+            </div>
+          </div>
+          ` : ''}
+        </div>
+      </div>
+    `;
+    
+    document.getElementById('state-detail-content').innerHTML = html;
+    console.log('🎉 State detail rendered successfully!');
+  }
+
+  document.addEventListener('DOMContentLoaded', loadStateDetail);
+</script>

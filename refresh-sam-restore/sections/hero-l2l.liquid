@@ -1,0 +1,233 @@
+<style>
+  .hero-l2l-section {
+    padding: 40px 0;
+    background: {{ section.settings.background_gradient | default: 'linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%)' }};
+  }
+
+  .hero-l2l-container {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .hero-l2l-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .hero-l2l-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .hero-l2l-content h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: {{ section.settings.heading_color | default: '#333333' }};
+  }
+
+  .hero-l2l-content p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    margin-bottom: 2rem;
+    color: {{ section.settings.text_color | default: '#666666' }};
+    line-height: 1.6;
+  }
+
+  .hero-l2l-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: {{ section.settings.button_bg_color | default: '#000000' }};
+    color: {{ section.settings.button_text_color | default: '#ffffff' }};
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .hero-l2l-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .hero-l2l-image {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .hero-l2l-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .hero-l2l-placeholder {
+    background: #f0f0f0;
+    border-radius: 8px;
+    aspect-ratio: 3/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 1.2rem;
+  }
+
+  /* Mobile Responsive */
+  @media screen and (max-width: 768px) {
+    .hero-l2l-wrapper {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .hero-l2l-content {
+      text-align: center;
+    }
+
+    .hero-l2l-image {
+      order: -1;
+      width: 100%;
+    }
+
+    .hero-l2l-container {
+      padding: 0 1rem;
+    }
+  }
+
+  /* Image position variations */
+  .hero-l2l-wrapper.image-right {
+    flex-direction: row-reverse;
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero-l2l-wrapper.image-right {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<div class="hero-l2l-section">
+  <div class="hero-l2l-container">
+    <div class="hero-l2l-wrapper {% if section.settings.image_position == 'right' %}image-right{% endif %}">
+      <div class="hero-l2l-content">
+        <h1>{{ section.settings.heading | default: 'Your Headline Here' }}</h1>
+        <p>{{ section.settings.text | default: 'Add your descriptive text here to engage visitors.' }}</p>
+        {% if section.settings.button_label != blank %}
+          <a href="{{ section.settings.button_link }}" class="hero-l2l-button">
+            {{ section.settings.button_label }}
+          </a>
+        {% endif %}
+      </div>
+      <div class="hero-l2l-image">
+        {% if section.settings.image %}
+          {{ section.settings.image | image_url: width: 1200 | image_tag:
+            loading: 'eager',
+            widths: '375, 550, 750, 1100, 1200',
+            sizes: '(min-width: 769px) 50vw, 100vw'
+          }}
+        {% else %}
+          <div class="hero-l2l-placeholder">
+            <span>Select an Image</span>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero L2L",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Laundry to Landscape Systems"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Transform your washing machine water into a sustainable irrigation solution for your garden."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "background_gradient",
+      "label": "Background Gradient",
+      "default": "linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%)",
+      "info": "CSS gradient or solid color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero L2L"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,29 @@
+<div id="{{ section.settings.section_id }}" style="display:block"></div>
+
+{% schema %}
+{
+  "name": "Jump Section",
+  "tag": "section",
+  "class": "cmp-jump-section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Jump Section"
+    },
+    {
+      "type": "text",
+      "label": "Section ID",
+      "id": "section_id"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Jump Section"
+    }
+  ]
+}
+{% endschema %}

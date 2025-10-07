@@ -1,0 +1,614 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_yfHtE4": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_n8Kiaj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Laundry-to-Landscape Greywater System",
+            "heading_size": "h1"
+          }
+        },
+        "text_3WkhTn": {
+          "type": "text",
+          "settings": {
+            "text": "Start reusing your laundry water to revive your garden. Save money and reduce your environmental impact with the easy-to-install Aqua2use GWDD.",
+            "text_style": "body"
+          }
+        },
+        "buttons_A4ekBf": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Buy Aqua2Use GWDD",
+            "button_link_1": "shopify://products/aqua2use-gwdd",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_n8Kiaj",
+        "text_3WkhTn",
+        "buttons_A4ekBf"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/iStock-1969135631.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_TxYqmd": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_DeKwNM": {
+          "type": "caption",
+          "settings": {
+            "caption": "Live Small. Save Big. Go Green.",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_q3je6P": {
+          "type": "heading",
+          "settings": {
+            "header_type": "h2",
+            "heading": "<strong>Laundry Water Doesn’t Have to Go to Waste</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_PPUaif": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tired of watching gallons of laundry water go down the drain? </p>"
+          }
+        },
+        "text_mA7pLi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Aqua2use Greywater Diversion Device (GWDD) gives you an easy, eco-conscious way to redirect that water from your washing machine straight into your landscape—no waste, no hassle.</p>"
+          }
+        },
+        "text_4pBV76": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our compact, fully automated Aqua2Use system installs with just six simple plumbing connections. </p><p>Whether you’re looking to reduce your water bill, extend the life of your septic system, or keep your plants thriving in a drought-prone area, the Aqua2use GWDD is the trusted, compact solution built for modern homes.<br/></p>"
+          }
+        },
+        "button_ERUWGh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Aqua2Use GWDD",
+            "button_link": "shopify://products/aqua2use-gwdd",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_DeKwNM",
+        "heading_q3je6P",
+        "text_PPUaif",
+        "text_mA7pLi",
+        "text_4pBV76",
+        "button_ERUWGh"
+      ],
+      "custom_css": [
+        ".gradient {margin-top: calc(var(--spacing-sections-mobile) * -1);}",
+        "@media screen and (min-width: 750px) {.gradient {margin-top: calc(var(--spacing-sections-desktop) * -1); }}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_8rzaFB": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_b7tCTz": {
+          "type": "caption",
+          "settings": {
+            "caption": "maximizes every drop",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_wHXHGb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Reuse Laundry Water. Revive Your Garden. Reduce Your Bill.",
+            "heading_size": "h2"
+          }
+        },
+        "text_YWx3ng": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every load of laundry can provide valuable irrigation water for your trees, shrubs, and ornamental gardens. With the GWDD, you can divert greywater in real time, filter it with our 4-stage system, and use it safely—without digging into your plumbing or making major upgrades.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_pxa4d8": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Aqua2Use GWDD",
+            "button_link": "shopify://products/aqua2use-gwdd",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_b7tCTz",
+        "heading_wHXHGb",
+        "text_YWx3ng",
+        "button_pxa4d8"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/iStock-1455953320.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17450707660ab4a9f6": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_bP74aX": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_bP74aX"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "multicolumn_m8Ai3h": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_pg7PT3": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "Save Water Instantly",
+            "text": "<p>Reuse up to 40,000 gallons of greywater annually just by rerouting your laundry discharge.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_KxH9H4": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "Keep Gardens Lush",
+            "text": "<p>Filtered greywater is nutrient-rich and ideal for non-edible plants. Customers report greener gardens—even in dry climates.<br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WbdtzM": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "Built to Last",
+            "text": "<p>From cabins to tiny homes and full-size residences, customers report years of reliable use with only occasional filter rinsing required.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_pg7PT3",
+        "column_KxH9H4",
+        "column_WbdtzM"
+      ],
+      "settings": {
+        "title": "Reroute Laundry Water. Revive Your Garden.",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collage_D6qjgX": {
+      "type": "collage",
+      "blocks": {
+        "image_6yh6F6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PXL_20220122_161536977.jpg"
+          }
+        },
+        "product_qdByhh": {
+          "type": "product",
+          "settings": {
+            "product": "aqua2use-gwdd",
+            "second_image": false
+          }
+        },
+        "collection_jw9B3d": {
+          "type": "collection",
+          "settings": {
+            "collection": "all"
+          }
+        }
+      },
+      "block_order": [
+        "image_6yh6F6",
+        "product_qdByhh",
+        "collection_jw9B3d"
+      ],
+      "settings": {
+        "heading": "<strong>Laundry to Landscape Greywater System</strong>",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_DJG6MH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_BJPYmC": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Step 1: Divert</strong>",
+            "text": "<p>Connect your washing machine's drain hose directly to the Aqua2use GWDD. The system captures greywater from every load—no plumbing overhaul required.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gRhDec": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Step 2: Filter</strong>",
+            "text": "<p>Greywater passes through a 4-stage filtration system, removing lint, hair, and fine debris. The result? Clean, particle-free water that’s safe for subsurface irrigation.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GHdk6g": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Step 3: Irrigate</strong>",
+            "text": "<p>Filtered greywater is directed through your subsurface drip irrigation system or mulch basins. Your trees, shrubs, and ornamental plants get consistent moisture—right when they need it.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_BJPYmC",
+        "column_gRhDec",
+        "column_GHdk6g"
+      ],
+      "settings": {
+        "title": "From Laundry to Landscape in 3 Simple Steps",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_VPBzXy": {
+      "type": "multirow",
+      "blocks": {
+        "row_X7r6cA": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/iStock-1969135631.jpg",
+            "caption": "Choose Sustainability—One Load at a Time",
+            "heading": "<strong>Do More with the Water You Already Use</strong>",
+            "text": "<p>Every rinse cycle becomes a chance to reduce waste and protect local waterways. By reusing greywater from laundry, you’re sending less down the drain—and doing more for the planet.</p>",
+            "button_label": "Buy Aqua2Use GWDD",
+            "button_link": "shopify://products/aqua2use-gwdd"
+          }
+        },
+        "row_84jhiy": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/gwdd-ug.jpg",
+            "caption": "Set It Up. Start Saving.",
+            "heading": "<strong>Fast Installation, Immediate Impact</strong>",
+            "text": "<p>Most homeowners get their system up and running in just <strong>2 to 4 hours</strong>. No complex plumbing. No special tools. Just quick setup and instant water savings.</p>",
+            "button_label": "Buy Aqua2Use GWDD",
+            "button_link": "shopify://products/aqua2use-gwdd"
+          }
+        },
+        "row_VABQYB": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/gwdd-pump.jpg",
+            "caption": "Small System. Big Performance.",
+            "heading": "<strong>Compact Greywater System, Maximum Efficiency</strong>",
+            "text": "<p>Measuring only <strong>24″ L x 15″ W x 20″ H</strong>, the Aqua2use GWDD is perfectly sized for <strong>tiny homes, cabins, and backyards</strong> where space is at a premium—but performance is non-negotiable.</p>",
+            "button_label": "Buy Aqua2Use GWDD",
+            "button_link": "shopify://products/aqua2use-gwdd"
+          }
+        },
+        "row_XqnMT6": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/david-becker-rrfdqjJWwmU-unsplash.jpg",
+            "caption": "Water You Can Reuse. Savings You’ll Notice.",
+            "heading": "<strong>Over 40,000 Gallons Recycled Per Year</strong>",
+            "text": "<p>A single household can divert tens of thousands of gallons from the sewer—just by doing laundry. That means lower water bills, fewer drought restrictions, and a healthier yard.</p>",
+            "button_label": "Buy Aqua2Use GWDD",
+            "button_link": "shopify://products/aqua2use-gwdd"
+          }
+        }
+      },
+      "block_order": [
+        "row_X7r6cA",
+        "row_84jhiy",
+        "row_VABQYB",
+        "row_XqnMT6"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_3zi6DA": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_TAzL3H": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Chemical Runoff from Detergents</strong>",
+            "text": "<p>When laundry greywater goes untreated, it often carries detergent residue, fabric softeners, and microplastics straight into storm drains and waterways—harming fish, amphibians, and aquatic plants.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8HfQ37": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Ground Saturation and Septic Strain</strong>",
+            "text": "<p>Dumping laundry water onto the ground or into overburdened septic systems can lead to pooling, soil contamination, and long-term damage to local groundwater quality.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9RKcTj": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "<strong>Disruption of Local Ecosystems</strong>",
+            "text": "<p>Excess greywater that isn't filtered or properly managed can alter soil chemistry and hurt pollinators like bees and butterflies by encouraging mold, bacteria, or unwanted plant overgrowth.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_TAzL3H",
+        "column_8HfQ37",
+        "column_9RKcTj"
+      ],
+      "settings": {
+        "title": "<strong>Keep Laundry Water Out of Nature’s Way</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_contact_form_QaVwFX": {
+      "type": "rich-text-contact-form",
+      "blocks": {
+        "heading_hTixbQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Reuse Your Laundry Water?</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_hmp4Hg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Join thousands of homeowners turning rinse cycles into real savings. The Aqua2use GWDD is the easiest way to start reusing greywater—no plumbing overhaul, no guesswork, just smart water use.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hTixbQ",
+        "text_hmp4Hg"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "contact_heading": "Get in Touch"
+      }
+    },
+    "collapsible_content_tmGrrr": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_bpjMdD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I really use laundry water to irrigate my plants?",
+            "icon": "none",
+            "row_content": "<p>Yes—laundry greywater is perfect for irrigating non-edible plants like trees, shrubs, and ornamental gardens. The Aqua2use GWDD captures each load’s discharge, filters out particles, and routes the water to your landscape through drip lines or mulch basins.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tfhfiK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the system hard to install?",
+            "icon": "none",
+            "row_content": "<p>Not at all. Most installations take 2–4 hours and require only basic tools. The GWDD connects directly to your washing machine’s drain hose and can be routed to irrigation zones using standard garden or drip tubing. No trenching or advanced plumbing required.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ctJgmc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the filtered greywater safe?",
+            "icon": "none",
+            "row_content": "<p>Yes—after passing through Aqua2use’s <strong>4-stage filtration system</strong>, the water is clean enough for subsurface irrigation. It’s not suitable for drinking or vegetable gardens, but it’s ideal for keeping landscapes healthy—especially in drought-prone areas.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PCXGpG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What kind of laundry detergent should I use?",
+            "icon": "none",
+            "row_content": "<p>We recommend <strong>low-sodium, biodegradable detergents</strong> that are labeled “greywater safe” or “biocompatible.” Avoid bleach, boron, or softeners, which can harm soil and plants over time. Brands like Oasis and Ecos are great choices.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Ybk7Nb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will the system work on uneven or uphill terrain?",
+            "icon": "none",
+            "row_content": "<p>Yes. The Aqua2use GWDD includes a built-in pump that can push filtered greywater up gentle slopes or over long distances—perfect for homes with raised beds or irrigation zones that aren’t gravity-fed.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_igwtCw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What maintenance is required?",
+            "icon": "none",
+            "row_content": "<p>Minimal. Just rinse the internal filters with a garden hose every 4–6 months. Many users report doing this as part of seasonal yard maintenance and get <strong>years of trouble-free performance</strong>.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_bpjMdD",
+        "collapsible_row_tfhfiK",
+        "collapsible_row_ctJgmc",
+        "collapsible_row_PCXGpG",
+        "collapsible_row_Ybk7Nb",
+        "collapsible_row_igwtCw"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "scheme-3",
+        "container_color_scheme": "scheme-5",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_yfHtE4",
+    "rich_text_TxYqmd",
+    "image_with_text_8rzaFB",
+    "17450707660ab4a9f6",
+    "multicolumn_m8Ai3h",
+    "collage_D6qjgX",
+    "multicolumn_DJG6MH",
+    "multirow_VPBzXy",
+    "multicolumn_3zi6DA",
+    "rich_text_contact_form_QaVwFX",
+    "collapsible_content_tmGrrr"
+  ]
+}

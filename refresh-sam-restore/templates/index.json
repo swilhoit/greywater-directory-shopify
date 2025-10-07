@@ -1,0 +1,675 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_bbUC4a": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_jYQ8Ud": {
+          "type": "heading",
+          "settings": {
+            "heading": "Greywater Systems for Tiny Homes, RVs, Cabins, and Homes",
+            "heading_size": "h1"
+          }
+        },
+        "text_EVMXYy": {
+          "type": "text",
+          "settings": {
+            "text": "Water Wise Group is on a mission to help you save water, lower your bills, and grow healthier landscapes—without compromising on simplicity or sustainability. Our Aqua2use systems reclaim greywater from your sinks, showers, and laundry, filter it through a patented multi-stage process, and redirect it for safe, effective outdoor irrigation.",
+            "text_style": "body"
+          }
+        },
+        "buttons_wiHV8c": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Get the Aqua2use GWDD",
+            "button_link_1": "shopify://products/aqua2use-gwdd",
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop All Greywater Systems",
+            "button_link_2": "shopify://collections/all",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_jYQ8Ud",
+        "text_EVMXYy",
+        "buttons_wiHV8c"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/IMG_2481.heic",
+        "image_overlay_opacity": 30,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "multicolumn_kMEQKt": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_EhTfb8": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "image": "shopify://shop_images/bg-logo_web-large.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_44hJP3": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "image": "shopify://shop_images/architect.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_BJmxaQ": {
+          "type": "column",
+          "settings": {
+            "image_link": true,
+            "image": "shopify://shop_images/family-handyman.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "https://www.familyhandyman.com/article/grey-water/"
+          }
+        },
+        "column_LbwmXe": {
+          "type": "column",
+          "settings": {
+            "image_link": true,
+            "image": "shopify://shop_images/The_Washington_Post_Newspaper.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "https://www.washingtonpost.com/business/2022/03/28/greywater-home-water-recycling-systems/"
+          }
+        }
+      },
+      "block_order": [
+        "column_EhTfb8",
+        "column_44hJP3",
+        "column_BJmxaQ",
+        "column_LbwmXe"
+      ],
+      "custom_css": [
+        ".multicolumn .title-wrapper-with-link {width: 100%; display: block;}",
+        "h2 {text-align: center;}"
+      ],
+      "settings": {
+        "title": "As Seen In",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_9BUzUi": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_gBRiU4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Aqua2Use Greywater Systems",
+            "heading_size": "h1"
+          }
+        },
+        "text_wXL9Bc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Aqua2use Grey Water Diversion System collects grey water from your sinks, showers, and laundry. Using a State of the Art Progressive 4 Stage Filtration system with Matala filters (Matala Black, Gray, and Blue filter mats), it removes impurities for safe outdoor irrigation.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gBRiU4",
+        "text_wXL9Bc"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 750px) {.image-with-text__grid--reverse .image-with-text__content {padding-left: 0; }}",
+        ".image-with-text__grid .image-with-text__media img {object-fit: contain !important;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/aqua2use-greywater-recycling-sytem.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-5",
+        "color_scheme": "scheme-5",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 52
+      }
+    },
+    "video_iiqAm8": {
+      "type": "video",
+      "custom_css": [
+        "h2 {text-align: center;}"
+      ],
+      "settings": {
+        "heading": "How it Works",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=XN6yyuSg5Kw",
+        "cover_image": "shopify://shop_images/maxresdefault.jpg",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 48
+      }
+    },
+    "17440764827ed485ea": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_all_reviews_text_BwAicn": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_all_reviews_text_BwAicn"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1744076459de237295": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "multicolumn_PAUJER": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_REPrPe": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "★★★★★",
+            "text": "<h4><em>“We live in the desert, and water is scarce... It's been great to have all this additional water available for the garden.”</em></h4><h4><em>—  </em>Dave in Baja</h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Rjb3XR": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "★★★★★",
+            "text": "<h4><em>“Tiny house living for 7 years, works great! This system seamlessly integrated into our design. The county had no issues.” </em></h4><h4><em>-</em>Mike Ellsworth</h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_BzUqMP": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "★★★★★",
+            "text": "<h4><em>“I permanently live in a travel trailer. This system fixed the smell and pooling issues and now I water plants with a garden hose. So easy.”</em></h4><h4><em>— </em>Jay Linden<em><br/></em></h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_wKQHFd": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "★★★★★",
+            "text": "<h4><em>“We have it at our cabin where we pump water from our creek... We have the greenest bushes and wild roses in the area.”</em></h4><h4><em>— </em>D & M’s Cabin</h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_dWyWNG": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "★★★★★",
+            "text": "<h4><em>“GWDD System 5 years STILL working perfectly! Top-notch product and amazing customer service.”</em></h4><h4><em>— </em>J.G.</h4>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_REPrPe",
+        "column_Rjb3XR",
+        "column_BzUqMP",
+        "column_wKQHFd",
+        "column_dWyWNG"
+      ],
+      "settings": {
+        "title": "Trusted by Homeowners Across the Country",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "Start Saving Water with the Aqua2use System",
+        "button_link": "shopify://products/aqua2use-gwdd",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_47jekn": {
+      "type": "multirow",
+      "blocks": {
+        "row_bwmBwf": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/1743534544__54d0ff3a-8956-41ef-b5b5-58395161c4d5__original.jpg",
+            "caption": "",
+            "heading": "Tiny Homes & Off-Grid Living",
+            "text": "<p>Approved for county regulations and easy to integrate into existing plumbing work.</p>",
+            "button_label": "Grey Water System For Tiny Homes",
+            "button_link": "shopify://pages/greywater-systems-for-tiny-homes"
+          }
+        },
+        "row_kHd8B8": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/1743268400__img_5279__original.jpg",
+            "caption": "",
+            "heading": "RV Travelers",
+            "text": "<p>Connect to RV grey water outlets to prevent soggy campsites. </p>",
+            "button_label": "Greywater System For RVs",
+            "button_link": "shopify://pages/greywater-systems-for-rvs"
+          }
+        },
+        "row_Dnzki3": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/andrea-davis-JJaij2iMdvU-unsplash.jpg",
+            "caption": "",
+            "heading": "Cabins & Rural Homes",
+            "text": "<p>Recycle laundry and shower water for outdoor irrigation. </p>",
+            "button_label": "Shop Aqua2use Pro",
+            "button_link": "shopify://products/aqua2use-pro"
+          }
+        }
+      },
+      "block_order": [
+        "row_bwmBwf",
+        "row_kHd8B8",
+        "row_Dnzki3"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-right",
+        "section_color_scheme": "scheme-1",
+        "row_color_scheme": "scheme-3",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_cffzLm": {
+      "type": "multirow",
+      "blocks": {
+        "row_qmnzc7": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/PXL_20231007_202526228-EDIT.jpg",
+            "caption": "",
+            "heading": "Drought-Prone Households",
+            "text": "<p>Lower your water bill and keep your garden green—even during restrictions.</p>",
+            "button_label": "Save Water with Aqua2Use",
+            "button_link": "shopify://products/aqua2use-gwdd"
+          }
+        },
+        "row_VggJct": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/iStock-1455953320.jpg",
+            "caption": "",
+            "heading": "Laundry-to-Landscape",
+            "text": "<p>Reuse your laundry water to revive your garden. </p>",
+            "button_label": "Recycle Laundry Water",
+            "button_link": "shopify://pages/laundry-to-landscape-greywater-system"
+          }
+        },
+        "row_9YCPir": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/PXL_20211117_000207812.jpg",
+            "caption": "",
+            "heading": "Homes with Septic Systems",
+            "text": "<p>Divert grey water to irrigation and extend your septic system's life. Minimize black water treatment needs, and improve water conservation.</p>",
+            "button_label": "Greywater System for Septic",
+            "button_link": "shopify://products/aqua2use-gwdd"
+          }
+        }
+      },
+      "block_order": [
+        "row_qmnzc7",
+        "row_VggJct",
+        "row_9YCPir"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "scheme-3",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_YfhY6j": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Shop Greywater Systems",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 2,
+        "columns_desktop": 2,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-3",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_HxTgAr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_TXAYkc": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Founder",
+            "heading_size": "h1"
+          }
+        },
+        "text_nbQyRF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>I’m Sam Wilhoit, owner of Water Wise Group. I introduced the Aqua2use system to the U.S. to help conserve our most precious resource: <strong>clean water</strong>. Our mission is simple — to make greywater reuse accessible, affordable, and sustainable for every home. Conserving water today creates a greener world tomorrow. Collect. Filter. <em>Flourish.</em></p>",
+            "text_style": "body"
+          }
+        },
+        "button_Cj6MTN": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_TXAYkc",
+        "text_nbQyRF",
+        "button_Cj6MTN"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Sam_founder_image.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_yKTh6R": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_wfqFH6": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "image": "shopify://shop_images/icon-save-money.png",
+            "title": "Save Money",
+            "text": "<p>Cut your water bill by 40%</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_VfKWmb": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "image": "shopify://shop_images/icon-save-water.png",
+            "title": "Conserve Water",
+            "text": "<p>Save up to 40,000 gallons</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6hqpL9": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "image": "shopify://shop_images/icon-save-yard.png",
+            "title": "Be Eco-Friendly",
+            "text": "<p>Use water more than once</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_wfqFH6",
+        "column_VfKWmb",
+        "column_6hqpL9"
+      ],
+      "custom_css": [
+        ".multicolumn .title-wrapper-with-link {width: 100%; display: block;}",
+        "h2 {text-align: center;}"
+      ],
+      "settings": {
+        "title": "Benefits of Greywater Reuse",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_7erMqw": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xwWi6Q": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Greywater Way",
+            "heading_size": "h1"
+          }
+        },
+        "stats_RPqJdb": {
+          "type": "stats",
+          "settings": {
+            "number_one": "40,000+",
+            "caption_one": "gallons saved annually per system",
+            "number_two": "5,000+",
+            "caption_two": "systems sold since 2010"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xwWi6Q",
+        "stats_RPqJdb"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 750px) {.image-with-text__content {padding-right: 0; }}",
+        "img {object-fit: contain;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/home-water-drop-no-shadow-vector.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-3",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_FHxkU8": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_RhrbVA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Award-Winning Technology",
+            "heading_size": "h1"
+          }
+        },
+        "text_MnYkVq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Water Wise Group’s Aqua2use system was named a Top-10 Green Building Product by BuildingGreen. Recognized for water conservation, ease of installation, and eco-friendly performance.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RhrbVA",
+        "text_MnYkVq"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 750px) {.image-with-text__content {padding-right: 0px; }}",
+        "img {object-fit: contain;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/gwdd-pump.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_EKLK8p": {
+      "type": "featured-blog",
+      "custom_css": [
+        ".title-wrapper-with-link {width: 100%; display: block;}",
+        "h2 {text-align: center;}"
+      ],
+      "settings": {
+        "heading": "Greywater Education",
+        "heading_size": "h1",
+        "blog": "greywater-education",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_bbUC4a",
+    "multicolumn_kMEQKt",
+    "image_with_text_9BUzUi",
+    "video_iiqAm8",
+    "17440764827ed485ea",
+    "1744076459de237295",
+    "multicolumn_PAUJER",
+    "multirow_47jekn",
+    "multirow_cffzLm",
+    "featured_collection_YfhY6j",
+    "image_with_text_HxTgAr",
+    "multicolumn_yKTh6R",
+    "image_with_text_7erMqw",
+    "image_with_text_FHxkU8",
+    "featured_blog_EKLK8p"
+  ]
+}

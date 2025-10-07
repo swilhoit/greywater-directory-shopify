@@ -1,0 +1,267 @@
+{% comment %}
+  FAQ Section for L2L Pages - Individual Metafields Version
+  Uses individual metafields instead of JSON array
+{% endcomment %}
+
+{% liquid
+  # Get individual FAQ metafields
+  assign faq1_question = page.metafields.l2l_individual.faq1_question
+  assign faq1_answer = page.metafields.l2l_individual.faq1_answer
+
+  assign faq2_question = page.metafields.l2l_individual.faq2_question
+  assign faq2_answer = page.metafields.l2l_individual.faq2_answer
+
+  assign faq3_question = page.metafields.l2l_individual.faq3_question
+  assign faq3_answer = page.metafields.l2l_individual.faq3_answer
+
+  assign faq4_question = page.metafields.l2l_individual.faq4_question
+  assign faq4_answer = page.metafields.l2l_individual.faq4_answer
+
+  assign faq5_question = page.metafields.l2l_individual.faq5_question
+  assign faq5_answer = page.metafields.l2l_individual.faq5_answer
+
+  # Check if we have metafield data
+  assign has_metafield_faqs = false
+  if faq1_question != blank or faq2_question != blank or faq3_question != blank or faq4_question != blank or faq5_question != blank
+    assign has_metafield_faqs = true
+  endif
+%}
+
+<section class="l2l-faq section-{{ section.id }}-padding">
+  <div class="container">
+    {% if section.settings.heading %}
+      <h2 class="l2l-faq__heading h2 center">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+
+    {% if section.settings.subheading %}
+      <p class="l2l-faq__subheading center">
+        {{ section.settings.subheading }}
+      </p>
+    {% endif %}
+
+    <div class="l2l-faq__list">
+      {% if has_metafield_faqs %}
+        {% comment %} Use individual metafield data {% endcomment %}
+
+        {% if faq1_question != blank %}
+          <details class="l2l-faq__item">
+            <summary class="l2l-faq__question">{{ faq1_question }}</summary>
+            <div class="l2l-faq__answer">
+              {{ faq1_answer | newline_to_br }}
+            </div>
+          </details>
+        {% endif %}
+
+        {% if faq2_question != blank %}
+          <details class="l2l-faq__item">
+            <summary class="l2l-faq__question">{{ faq2_question }}</summary>
+            <div class="l2l-faq__answer">
+              {{ faq2_answer | newline_to_br }}
+            </div>
+          </details>
+        {% endif %}
+
+        {% if faq3_question != blank %}
+          <details class="l2l-faq__item">
+            <summary class="l2l-faq__question">{{ faq3_question }}</summary>
+            <div class="l2l-faq__answer">
+              {{ faq3_answer | newline_to_br }}
+            </div>
+          </details>
+        {% endif %}
+
+        {% if faq4_question != blank %}
+          <details class="l2l-faq__item">
+            <summary class="l2l-faq__question">{{ faq4_question }}</summary>
+            <div class="l2l-faq__answer">
+              {{ faq4_answer | newline_to_br }}
+            </div>
+          </details>
+        {% endif %}
+
+        {% if faq5_question != blank %}
+          <details class="l2l-faq__item">
+            <summary class="l2l-faq__question">{{ faq5_question }}</summary>
+            <div class="l2l-faq__answer">
+              {{ faq5_answer | newline_to_br }}
+            </div>
+          </details>
+        {% endif %}
+
+      {% else %}
+        {% comment %} Fall back to section blocks {% endcomment %}
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'faq' %}
+              <details class="l2l-faq__item" {{ block.shopify_attributes }}>
+                <summary class="l2l-faq__question">{{ block.settings.question }}</summary>
+                <div class="l2l-faq__answer">
+                  {{ block.settings.answer | newline_to_br }}
+                </div>
+              </details>
+          {% endcase %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "L2L FAQ (Individual)",
+  "tag": "section",
+  "class": "l2l-faq-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section heading",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Get answers to common questions about L2L systems"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "How much water can I save?"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer",
+          "default": "You can typically save 10,000+ gallons per year with a properly installed L2L system."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "L2L FAQ (Individual)",
+      "blocks": [
+        { "type": "faq" },
+        { "type": "faq" },
+        { "type": "faq" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .l2l-faq {
+    background: #fff;
+  }
+
+  .l2l-faq__heading {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+
+  .l2l-faq__subheading {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+  }
+
+  .l2l-faq__list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .l2l-faq__item {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  .l2l-faq__question {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    cursor: pointer;
+    font-weight: 600;
+    color: #2c3e50;
+    list-style: none;
+    transition: background 0.3s;
+    position: relative;
+  }
+
+  .l2l-faq__question:hover {
+    background: #e9ecef;
+  }
+
+  .l2l-faq__question::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+  }
+
+  .l2l-faq__item[open] .l2l-faq__question::after {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .l2l-faq__answer {
+    padding: 1.5rem;
+    color: #5a6c7d;
+    line-height: 1.6;
+    border-top: 1px solid #e9ecef;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  @media (max-width: 768px) {
+    .l2l-faq__question {
+      padding: 1rem;
+    }
+
+    .l2l-faq__answer {
+      padding: 1rem;
+    }
+
+    .l2l-faq__question::after {
+      right: 1rem;
+    }
+  }
+</style>

@@ -1,0 +1,166 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_MxJweJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HndwJ7": {
+          "type": "heading",
+          "settings": {
+            "header_type": "h2",
+            "heading": "Contact Us",
+            "heading_size": "h1"
+          }
+        },
+        "text_birCNE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Thank you for visiting Water Wise Group. If you have any questions, please contact us.</p>"
+          }
+        },
+        "button_LPCcki": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HndwJ7",
+        "text_birCNE",
+        "button_LPCcki"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_DDVqm6": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_pBrKi8": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "Eden on Earth",
+            "text": "<p>About:</p><p>City: Flagstaff</p><p>Phone: (928) 853-9716</p>",
+            "link_label": "Visit Website",
+            "link": ""
+          }
+        },
+        "column_NrXwXz": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "Arizona Green Plumbing",
+            "text": "<p>Arizona Green Plumbing provides information to assist homeowners with products to accommodate residential plumbing needs</p><p>-</p><p><strong>City</strong>: Flagstaff</p><p><strong>Phone</strong>: (928) 853-9716</p>",
+            "link_label": "Visit Website",
+            "link": ""
+          }
+        },
+        "column_8xXdUt": {
+          "type": "column",
+          "settings": {
+            "image_link": false,
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_pBrKi8",
+        "column_NrXwXz",
+        "column_8xXdUt"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Arizona",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "contact_form_YG3QmJ": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_DRWCKD": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Gretwater Systems",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "rich_text_MxJweJ",
+    "main",
+    "multicolumn_DDVqm6",
+    "contact_form_YG3QmJ",
+    "featured_collection_DRWCKD"
+  ]
+}

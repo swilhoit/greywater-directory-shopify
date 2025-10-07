@@ -1,0 +1,115 @@
+{
+  "hero_content": {
+    "heading": "Transform Your Laundry Water into Garden Gold",
+    "subheading": "A simple, eco-friendly solution that saves water and money while nourishing your landscape",
+    "button_text": "Start Your L2L Journey",
+    "button_url": "#get-started",
+    "image_url": "https://cdn.shopify.com/s/files/1/0xxx/xxxx/files/l2l-hero.jpg"
+  },
+  "statistics": [
+    {
+      "value": "15,000",
+      "suffix": "gal",
+      "label": "Water Saved Annually",
+      "description": "Average household savings with L2L system",
+      "icon": "💧"
+    },
+    {
+      "value": "$450",
+      "suffix": "/year",
+      "label": "Cost Savings",
+      "description": "Reduced water and sewer bills",
+      "icon": "💰"
+    },
+    {
+      "value": "50%",
+      "suffix": "",
+      "label": "Less Irrigation",
+      "description": "Reduction in outdoor water needs",
+      "icon": "🌱"
+    },
+    {
+      "value": "1",
+      "suffix": "weekend",
+      "label": "Quick Install",
+      "description": "DIY-friendly installation",
+      "icon": "⏱️"
+    }
+  ],
+  "features": [
+    {
+      "title": "Simple 3-Way Valve System",
+      "description": "Easily switch between landscape irrigation and sewer with a simple valve turn",
+      "icon": "🔧",
+      "details": [
+        "No pumps or filters needed",
+        "Gravity-fed design",
+        "Minimal maintenance required"
+      ]
+    },
+    {
+      "title": "Eco-Friendly Detergents",
+      "description": "Use plant-friendly, biodegradable soaps that nourish your soil",
+      "icon": "🧼",
+      "details": [
+        "No sodium, boron, or chlorine bleach",
+        "Safe for all plants",
+        "Improves soil quality over time"
+      ]
+    },
+    {
+      "title": "Mulch Basin System",
+      "description": "Distribute water evenly to multiple plants through mulch-filled basins",
+      "icon": "🌿",
+      "details": [
+        "Prevents runoff and pooling",
+        "Filters particles naturally",
+        "Enriches soil with organic matter"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is greywater safe for my plants?",
+      "answer": "Yes! When using plant-friendly detergents (free of sodium, boron, and bleach), greywater is safe and beneficial for most plants. The nutrients in greywater can actually help plants thrive."
+    },
+    {
+      "question": "How much does an L2L system cost?",
+      "answer": "A basic L2L system typically costs $200-500 in materials for DIY installation. Professional installation ranges from $1,000-2,500 depending on your layout."
+    },
+    {
+      "question": "Do I need a permit?",
+      "answer": "Requirements vary by location. Many states allow L2L systems without permits for washing machine greywater. Check your local codes or use our state directory."
+    },
+    {
+      "question": "How much maintenance is required?",
+      "answer": "L2L systems are very low maintenance. Simply clean the washing machine lint filter regularly and refresh mulch basins annually."
+    }
+  ],
+  "cta": {
+    "heading": "Ready to Start Saving Water?",
+    "description": "Join thousands of homeowners who are turning their laundry water into lush landscapes",
+    "primary_button": {
+      "text": "Get Installation Guide",
+      "url": "/pages/l2l-installation-guide"
+    },
+    "secondary_button": {
+      "text": "Find Local Installers",
+      "url": "/pages/installer-directory"
+    }
+  },
+  "testimonials": [
+    {
+      "name": "Sarah M.",
+      "location": "California",
+      "text": "Our water bill dropped by 30% and our fruit trees have never been healthier!",
+      "rating": 5
+    },
+    {
+      "name": "John D.",
+      "location": "Arizona",
+      "text": "Installation was easier than I expected. The whole family loves knowing we're saving water.",
+      "rating": 5
+    }
+  ]
+}

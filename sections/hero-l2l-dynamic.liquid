@@ -1,0 +1,190 @@
+{% comment %}
+  Hero Section for L2L Pages - Dynamic Version
+  This section reads content from page metafields or falls back to section settings
+{% endcomment %}
+
+{% liquid
+  # Get individual metafields, fallback to section settings
+  assign hero_heading = page.metafields.l2l_individual.hero_heading | default: section.settings.heading
+  assign hero_subheading = page.metafields.l2l_individual.hero_subheading | default: section.settings.text
+  assign hero_button_text = page.metafields.l2l_individual.hero_button_text | default: section.settings.button_label
+  assign hero_button_url = page.metafields.l2l_individual.hero_button_url | default: section.settings.button_link
+  assign hero_image_url = page.metafields.l2l_individual.hero_image_url
+%}
+
+<section class="l2l-hero section-{{ section.id }}-padding">
+  <div class="l2l-hero__container container">
+    <div class="l2l-hero__content">
+      <h1 class="l2l-hero__heading h1">
+        {{ hero_heading }}
+      </h1>
+
+      {% if hero_subheading != blank %}
+        <p class="l2l-hero__text">
+          {{ hero_subheading }}
+        </p>
+      {% endif %}
+
+      {% if hero_button_text != blank %}
+        <a
+          href="{{ hero_button_url | default: '#' }}"
+          class="button button--primary l2l-hero__button"
+        >
+          {{ hero_button_text }}
+        </a>
+      {% endif %}
+    </div>
+
+    {% if section.settings.image or hero_image_url != blank %}
+      <div class="l2l-hero__image-wrapper">
+        {% if hero_image_url != blank %}
+          <img
+            src="{{ hero_image_url }}"
+            alt="{{ hero_heading }}"
+            class="l2l-hero__image"
+            loading="lazy"
+          >
+        {% elsif section.settings.image %}
+          {{ section.settings.image | image_url: width: 800 | image_tag: class: 'l2l-hero__image', loading: 'lazy' }}
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "L2L Hero (Dynamic)",
+  "tag": "section",
+  "class": "l2l-hero-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Laundry to Landscape Systems",
+      "info": "This will be overridden by page metafields if set"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Transform your washing machine water into a thriving garden"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "L2L Hero (Dynamic)"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .l2l-hero {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+
+  .l2l-hero__container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+  }
+
+  .l2l-hero__content {
+    flex: 1;
+  }
+
+  .l2l-hero__heading {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+  }
+
+  .l2l-hero__text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #5a6c7d;
+  }
+
+  .l2l-hero__button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+
+  .l2l-hero__button:hover {
+    background: #229954;
+  }
+
+  .l2l-hero__image-wrapper {
+    flex: 1;
+  }
+
+  .l2l-hero__image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  @media (max-width: 768px) {
+    .l2l-hero__container {
+      flex-direction: column;
+    }
+  }
+</style>

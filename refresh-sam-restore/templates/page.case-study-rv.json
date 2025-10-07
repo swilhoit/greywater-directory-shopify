@@ -1,0 +1,197 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_MxJweJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HndwJ7": {
+          "type": "heading",
+          "settings": {
+            "header_type": "h1",
+            "heading": "<strong>From Muddy Mess to Thriving Garden: How One RV Owner Transformed Greywater into Greenery</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_birCNE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“I’ve been happy with the results. The plants are healthy and around my trailer is dry.” – Jay Linden</p>"
+          }
+        },
+        "button_LPCcki": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HndwJ7",
+        "text_birCNE",
+        "button_LPCcki"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_QFBicW": {
+      "type": "multirow",
+      "blocks": {
+        "row_JFk6iJ": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/roadpass-XLW1d4eWVy0-unsplash.jpg",
+            "caption": "",
+            "heading": "When Simple Drainage Became a Daily Headache",
+            "text": "<p>Living permanently in a travel trailer, Jay initially discharged greywater directly onto the property. Over time, this led to persistent puddles, foul odors, and excess moisture pooling around the trailer — making the area unpleasant and unsanitary.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_iaiLrE": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/1743268400__img_5279__original.jpg",
+            "caption": "",
+            "heading": "Plug. Filter. Flow. The DIY Setup That Fixed Everything",
+            "text": "<p>Jay installed the <a href=\"/products/aqua2use-gwdd\" title=\"Aqua2use Grey Water Diversion System\">Aqua2use Grey Water Diversion Device</a> (GWDD), connecting it directly to the RV’s greywater hose. The filtered water is now redirected through a standard garden hose and used to irrigate surrounding plants. Jay simply moves the hose every few days to distribute the water evenly.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_qXFX9Y": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/1743268404__img_5278__original.jpg",
+            "caption": "",
+            "heading": "A Cleaner Setup and a Greener Space—All from Recycled Water",
+            "text": "<p>The plants around the trailer are thriving thanks to the nutrient-rich greywater.</p><p>Eliminated the problem of standing water around the trailer.</p><p>The unit connects easily to standard RV fittings and requires minimal ongoing maintenance.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_9nfBCa": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/devon-mackay--lrJpsE6haY-unsplash.jpg",
+            "caption": "",
+            "heading": "<strong>The Bigger Picture</strong>",
+            "text": "<p>Jay’s story is more than a clever workaround—it’s proof that even small, mobile homes can contribute to smarter water use. With freshwater growing more precious in many regions, <strong>greywater systems like Aqua2use help reduce waste, support eco-friendly living, and make self-sufficient lifestyles more attainable.</strong></p><p>Whether you live in a tiny home, a cabin, or a travel trailer, repurposing greywater isn’t just practical—it’s a step toward a more resilient future.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_JFk6iJ",
+        "row_iaiLrE",
+        "row_qXFX9Y",
+        "row_9nfBCa"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_DRWCKD": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Gretwater Systems",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_fAU8cx": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Learn More About Saving Water!",
+        "heading_size": "h1",
+        "blog": "greywater-education",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "contact_form_YG3QmJ": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "rich_text_MxJweJ",
+    "main",
+    "multirow_QFBicW",
+    "featured_collection_DRWCKD",
+    "featured_blog_fAU8cx",
+    "contact_form_YG3QmJ"
+  ]
+}

@@ -1,0 +1,50 @@
+/* Custom styles for Laundry to Landscape page */
+
+/* Hero section - match header margins */
+body[data-template="page"] .shopify-section:has(.image-banner) .banner__content,
+body.template-page .shopify-section:has(.banner) .banner__content {
+  max-width: var(--page-width) !important;
+  margin: 0 auto !important;
+  padding: 0 5rem !important;
+}
+
+@media screen and (max-width: 749px) {
+  body[data-template="page"] .shopify-section:has(.image-banner) .banner__content,
+  body.template-page .shopify-section:has(.banner) .banner__content {
+    padding: 0 1.5rem !important;
+  }
+}
+
+/* Rich text section - overlap under hero (targets second section on page) */
+body[data-template="page"] .shopify-section:has(.rich-text),
+body.template-page main > .shopify-section:nth-child(3) {
+  margin-top: -8rem !important;
+  position: relative;
+  z-index: 10;
+}
+
+@media screen and (min-width: 750px) {
+  body[data-template="page"] .shopify-section:has(.rich-text),
+  body.template-page main > .shopify-section:nth-child(3) {
+    margin-top: -12rem !important;
+  }
+}
+
+/* Add background and shadow to overlapping section */
+body[data-template="page"] .shopify-section:has(.rich-text) .gradient,
+body.template-page main > .shopify-section:nth-child(3) .gradient {
+  background: var(--gradient-background);
+  border-radius: var(--text-boxes-radius);
+  box-shadow: var(--text-boxes-shadow-horizontal-offset)
+              var(--text-boxes-shadow-vertical-offset)
+              var(--text-boxes-shadow-blur-radius)
+              rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+  padding: 3rem;
+}
+
+@media screen and (max-width: 749px) {
+  body[data-template="page"] .shopify-section:has(.rich-text) .gradient,
+  body.template-page main > .shopify-section:nth-child(3) .gradient {
+    padding: 2rem 1.5rem;
+  }
+}
